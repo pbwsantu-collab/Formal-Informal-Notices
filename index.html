@@ -1,0 +1,1145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Formal Letters + Informal Letters + Notices - Complete Collection with Clickable Meanings</title>
+<style>
+  :root {
+    --primary: #1a5f7a;
+    --secondary: #159895;
+    --bg: #f8fafc;
+    --card: #ffffff;
+    --text: #1e293b;
+    --accent: #0f766e;
+    --bengali: #7c3aed;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    padding-bottom: 60px;
+  }
+  header {
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    color: white;
+    padding: 18px 20px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.15);
+  }
+  header h1 { font-size: 1.45rem; margin-bottom: 4px; }
+  header p { font-size: 0.9rem; opacity: 0.9; }
+  .menu-toggle {
+    display: none;
+    background: white;
+    color: var(--primary);
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  .section-nav {
+    background: #0f4c5c;
+    padding: 10px 12px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+    position: sticky;
+    top: 78px;
+    z-index: 99;
+  }
+  .section-nav a {
+    color: white;
+    text-decoration: none;
+    background: rgba(255,255,255,0.15);
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    transition: 0.2s;
+  }
+  .section-nav a:hover { background: white; color: var(--primary); }
+  .item-nav {
+    background: #134e4a;
+    padding: 8px 12px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    justify-content: center;
+    position: sticky;
+    top: 126px;
+    z-index: 98;
+  }
+  .item-nav a {
+    color: white;
+    text-decoration: none;
+    background: rgba(255,255,255,0.12);
+    padding: 4px 10px;
+    border-radius: 16px;
+    font-size: 0.78rem;
+    transition: 0.2s;
+  }
+  .item-nav a:hover { background: white; color: var(--primary); }
+  .container { max-width: 900px; margin: 0 auto; padding: 20px 16px; }
+  .section-title {
+    background: linear-gradient(90deg, #0f4c5c, #0f766e);
+    color: white;
+    padding: 16px 20px;
+    border-radius: 12px;
+    margin: 28px 0 20px;
+    font-size: 1.25rem;
+    font-weight: 700;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  }
+  .card {
+    background: var(--card);
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+    margin-bottom: 28px;
+    overflow: hidden;
+    border: 1px solid #e2e8f0;
+  }
+  .card-header {
+    background: linear-gradient(90deg, var(--primary), var(--secondary));
+    color: white;
+    padding: 14px 18px;
+    font-size: 1.05rem;
+    font-weight: 600;
+  }
+  .card-body { padding: 18px; }
+  .question {
+    background: #ecfdf5;
+    border-left: 4px solid var(--secondary);
+    padding: 12px 14px;
+    margin-bottom: 14px;
+    border-radius: 0 8px 8px 0;
+    font-size: 0.95rem;
+  }
+  .answer {
+    font-size: 1.02rem;
+    text-align: justify;
+    margin-bottom: 16px;
+    line-height: 1.7;
+    white-space: pre-line;
+  }
+  .letter-box, .notice-box {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 14px;
+    font-size: 0.95rem;
+    white-space: pre-line;
+    line-height: 1.65;
+  }
+  .letter-box { font-family: 'Courier New', monospace; }
+  .bengali {
+    background: #f5f3ff;
+    border-left: 4px solid var(--bengali);
+    padding: 12px 14px;
+    border-radius: 0 8px 8px 0;
+    font-size: 0.97rem;
+    line-height: 1.75;
+    color: #4c1d95;
+  }
+  .bengali strong { color: var(--bengali); }
+  .word {
+    color: var(--accent);
+    border-bottom: 1.5px dotted var(--accent);
+    cursor: pointer;
+    position: relative;
+    font-weight: 500;
+  }
+  .word:hover { background: #ccfbf1; }
+  .tooltip {
+    display: none;
+    position: absolute;
+    bottom: 125%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #1e293b;
+    color: white;
+    padding: 6px 11px;
+    border-radius: 6px;
+    font-size: 0.78rem;
+    white-space: nowrap;
+    z-index: 50;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+  }
+  .tooltip::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border: 5px solid transparent;
+    border-top-color: #1e293b;
+  }
+  .word.active .tooltip { display: block; }
+  footer {
+    text-align: center;
+    padding: 24px 20px;
+    color: #64748b;
+    font-size: 0.85rem;
+    border-top: 1px solid #e2e8f0;
+    margin-top: 20px;
+  }
+  @media (max-width: 700px) {
+    .section-nav, .item-nav { display: none; }
+    .section-nav.show, .item-nav.show { display: flex; }
+    .menu-toggle { display: inline-block; }
+    header { top: 0; }
+  }
+</style>
+</head>
+<body>
+<header>
+  <h1>Complete Letter & Notice Collection</h1>
+  <p>Formal Letters (14) • Informal Letters (12) • Notices (16) • Click highlighted words for Bengali meaning</p>
+  <button class="menu-toggle" onclick="document.querySelectorAll('.section-nav, .item-nav').forEach(n => n.classList.toggle('show'))">☰ Menu</button>
+</header>
+
+<nav class="section-nav">
+  <a href="#formal">Formal Letters (14)</a>
+  <a href="#informal">Informal Letters (12)</a>
+  <a href="#notices">Notices (16)</a>
+</nav>
+
+<div class="container">
+
+<!-- ==================== FORMAL LETTERS ==================== -->
+<div class="section-title" id="formal">📝 Formal Letters – All 14 Answers</div>
+<nav class="item-nav" style="position:static; margin-bottom:16px; border-radius:8px;">
+  <a href="#f1">1</a><a href="#f2">2</a><a href="#f3">3</a><a href="#f4">4</a>
+  <a href="#f5">5</a><a href="#f6">6</a><a href="#f7">7</a><a href="#f8">8</a>
+  <a href="#f9">9</a><a href="#f10">10</a><a href="#f11">11</a><a href="#f12">12</a>
+  <a href="#f13">13</a><a href="#f14">14</a>
+</nav>
+<!-- ==================== 1 ==================== -->
+<div class="card" id="f1">
+  <div class="card-header">1. Indiscriminate Use of Loudspeakers</div>
+  <div class="card-body">
+    <div class="question"><strong>Question:</strong> Write a letter within 100 words to the Editor of an English newspaper expressing your concern about the indiscriminate use of loudspeakers in your area.</div>
+    <div class="letter-box">
+From
+Rohan Das
+12, Station Road
+Kolkata – 700012
+8 September 2026
+To
+The Editor
+The Telegraph
+Kolkata
+Subject: Indiscriminate use of loudspeakers in our locality
+Sir,
+I wish to draw the kind attention of the concerned authorities through your esteemed daily to a serious problem in our area.
+Loudspeakers are used <span class="word">indiscriminately<span class="tooltip">অবাধে / বিচারবিবেচনাহীনভাবে</span></span> during festivals, marriages and political meetings. They start blaring from early morning and continue till late night. The old and the sick suffer from severe headache and sleeplessness. Students find it impossible to concentrate on their studies. The constant noise has made life <span class="word">unbearable<span class="tooltip">অসহ্য</span></span> for peaceful citizens.
+I earnestly request the administration to enforce the existing rules strictly and take immediate action against the offenders.
+Yours faithfully,
+Rohan Das
+    </div>
+    <div class="bengali"><strong>Bengali Meaning:</strong> প্রেরক রোহন দাস, ১২, স্টেশন রোড, কলকাতা – ৭০০০১২, ৮ সেপ্টেম্বর ২০২৬। প্রাপক সম্পাদক, দ্য টেলিগ্রাফ, কলকাতা। বিষয়: আমাদের এলাকায় লাউডস্পিকারের অবাধ ব্যবহার। মহোদয়, আমি আপনার সম্মানিত পত্রিকার মাধ্যমে সংশ্লিষ্ট কর্তৃপক্ষের দৃষ্টি আকর্ষণ করতে চাই আমাদের এলাকার একটি গুরুতর সমস্যার দিকে। উৎসব, বিবাহ ও রাজনৈতিক সভায় লাউডস্পিকার অবাধে ব্যবহার করা হয়। সকাল থেকে রাত পর্যন্ত সেগুলো বাজতে থাকে। বৃদ্ধ ও অসুস্থরা তীব্র মাথাব্যথা ও অনিদ্রায় ভোগেন। ছাত্রছাত্রীরা পড়াশোনায় মনোযোগ দিতে পারে না। অবিরাম শব্দ শান্তিপ্রিয় নাগরিকদের জীবন অসহ্য করে তুলেছে। আমি প্রশাসনকে আন্তরিকভাবে অনুরোধ করি বিদ্যমান নিয়ম কঠোরভাবে প্রয়োগ করতে এবং অপরাধীদের বিরুদ্ধে তাৎক্ষণিক ব্যবস্থা নিতে। আপনার বিশ্বস্ত, রোহন দাস।</div>
+  </div>
+</div>
+<!-- ==================== 2 ==================== -->
+<div class="card" id="f2">
+  <div class="card-header">2. Irregular Clearance of Garbage</div>
+  <div class="card-body">
+    <div class="question"><strong>Question:</strong> Write a letter to the Editor of a newspaper about the problems faced by common people due to irregular clearance of garbage in your locality. Use the given hints: Irregular clearance – foul smell and unhygienic place – commuters suffer a lot – breeding centre of mosquitoes and flies – worse condition in rain – negligence of municipality or G.P. – remedial steps.</div>
+    <div class="letter-box">
+From
+Priya Banerjee
+45, Park Street
+Howrah – 711101
+8 September 2026
+To
+The Editor
+Anandabazar Patrika
+Kolkata
+Subject: Irregular clearance of garbage in our locality
+Sir,
+Through the columns of your widely circulated newspaper I want to highlight a serious civic problem.
+Garbage is not cleared regularly in our locality. Huge heaps of waste remain for several days. <span class="word">Foul smell<span class="tooltip">দুর্গন্ধ</span></span> spreads everywhere and the entire place becomes highly <span class="word">unhygienic<span class="tooltip">অস্বাস্থ্যকর</span></span>. Commuters suffer a lot while walking on the roads. The garbage has turned into a breeding centre of mosquitoes and flies. The condition becomes even worse during the rainy season. The municipality or Gram Panchayat shows complete <span class="word">negligence<span class="tooltip">অবহেলা</span></span>.
+I request the authorities to take immediate remedial steps for regular clearance of garbage and protect public health.
+Yours faithfully,
+Priya Banerjee
+    </div>
+    <div class="bengali"><strong>Bengali Meaning:</strong> প্রেরক প্রিয়া ব্যানার্জি, ৪৫, পার্ক স্ট্রিট, হাওড়া – ৭১১১০১, ৮ সেপ্টেম্বর ২০২৬। প্রাপক সম্পাদক, আনন্দবাজার পত্রিকা, কলকাতা। বিষয়: আমাদের এলাকায় আবর্জনা অনিয়মিত পরিষ্কার। মহোদয়, আপনার বহুল প্রচারিত পত্রিকার মাধ্যমে আমি একটি গুরুতর নাগরিক সমস্যা তুলে ধরতে চাই। আমাদের এলাকায় আবর্জনা নিয়মিত পরিষ্কার করা হয় না। কয়েকদিন ধরে বিশাল আবর্জনার স্তূপ পড়ে থাকে। দুর্গন্ধ চারদিকে ছড়িয়ে পড়ে এবং পুরো জায়গা অত্যন্ত অস্বাস্থ্যকর হয়ে ওঠে। রাস্তায় হাঁটতে গিয়ে যাত্রীরা খুব কষ্ট পান। আবর্জনা মশা ও মাছির প্রজনন কেন্দ্র হয়ে উঠেছে। বর্ষাকালে অবস্থা আরও খারাপ হয়। পৌরসভা বা গ্রাম পঞ্চায়েত সম্পূর্ণ অবহেলা দেখায়। আমি কর্তৃপক্ষকে অনুরোধ করি আবর্জনা নিয়মিত পরিষ্কারের তাৎক্ষণিক ব্যবস্থা নিতে এবং জনস্বাস্থ্য রক্ষা করতে। আপনার বিশ্বস্ত, প্রিয়া ব্যানার্জি।</div>
+  </div>
+</div>
+<!-- ==================== 3 ==================== -->
+<div class="card" id="f3">
+  <div class="card-header">3. Insanitary Condition of Locality</div>
+  <div class="card-body">
+    <div class="question"><strong>Question:</strong> Write a letter to the Editor of an English daily complaining about the insanitary condition of your locality. (within 100 words) [Points: The population—irregular clearance of garbage, drains—foul smell—diseases—spread —necessary action]</div>
+    <div class="letter-box">
+From
+Amit Roy
+78, Lake Road
+Kolkata – 700029
+8 September 2026
+To
+The Editor
+The Statesman
+Kolkata
+Subject: Insanitary condition of our densely populated locality
+Sir,
+I wish to complain through your esteemed daily about the <span class="word">insanitary<span class="tooltip">অস্বাস্থ্যকর</span></span> condition of our locality.
+Our area is densely populated. Garbage is not cleared regularly. Drains remain choked with filth for days. Foul smell spreads all around and makes breathing difficult. Flies and mosquitoes breed freely. As a result various water-borne and mosquito-borne diseases spread rapidly among the people. Children and old persons suffer the most.
+I earnestly request the municipal authority to take necessary and immediate action for regular cleaning of garbage and drains.
+Yours faithfully,
+Amit Roy
+    </div>
+    <div class="bengali"><strong>Bengali Meaning:</strong> প্রেরক অমিত রায়, ৭৮, লেক রোড, কলকাতা – ৭০০০২৯, ৮ সেপ্টেম্বর ২০২৬। প্রাপক সম্পাদক, দ্য স্টেটসম্যান, কলকাতা। বিষয়: আমাদের ঘনবসতিপূর্ণ এলাকার অস্বাস্থ্যকর অবস্থা। মহোদয়, আমি আপনার সম্মানিত পত্রিকার মাধ্যমে আমাদের এলাকার অস্বাস্থ্যকর অবস্থা নিয়ে অভিযোগ জানাতে চাই। আমাদের এলাকা ঘনবসতিপূর্ণ। আবর্জনা নিয়মিত পরিষ্কার হয় না। নর্দমা দিনের পর দিন ময়লায় ভরে থাকে। দুর্গন্ধ চারদিকে ছড়িয়ে পড়ে এবং শ্বাস নিতে কষ্ট হয়। মাছি ও মশা অবাধে বংশবৃদ্ধি করে। ফলে মানুষের মধ্যে বিভিন্ন জলবাহিত ও মশাবাহিত রোগ দ্রুত ছড়িয়ে পড়ে। শিশু ও বৃদ্ধরা সবচেয়ে বেশি ভোগেন। আমি পৌর কর্তৃপক্ষকে আন্তরিকভাবে অনুরোধ করি আবর্জনা ও নর্দমা নিয়মিত পরিষ্কারের জন্য প্রয়োজনীয় ও তাৎক্ষণিক ব্যবস্থা নিতে। আপনার বিশ্বস্ত, অমিত রায়।</div>
+  </div>
+</div>
+<!-- ==================== 4 ==================== -->
+<div class="card" id="f4">
+  <div class="card-header">4. Excessive Use of Microphones & Loudspeakers</div>
+  <div class="card-body">
+    <div class="question"><strong>Question:</strong> Write a letter to the Editor of an English daily expressing your grave concern over the excessive use of microphones and loudspeakers during the festivals. [Points: Random use of microphones and loudspeakers during festivals – microphones everywhere – bad for the old and sick – awareness issue – complaining to the authority to take immediate steps]</div>
+    <div class="letter-box">
+From
+Suman Ghosh
+23, College Street
+Kolkata – 700073
+8 September 2026
+To
+The Editor
+The Times of India
+Kolkata
+Subject: Excessive use of microphones and loudspeakers during festivals
+Sir,
+I wish to express my grave concern over a growing problem in our city.
+During festivals microphones and loudspeakers are used randomly and excessively. They are fixed everywhere and play songs at a very high volume from morning till midnight. The old and the sick cannot sleep or take rest properly. Students face great difficulty in studying. Most people are not even aware of the harmful effects of continuous <span class="word">noise pollution<span class="tooltip">শব্দদূষণ</span></span>.
+I request the authority to take immediate steps and restrict the use of loudspeakers within the permissible limits.
+Yours faithfully,
+Suman Ghosh
+    </div>
+    <div class="bengali"><strong>Bengali Meaning:</strong> প্রেরক সুমন ঘোষ, ২৩, কলেজ স্ট্রিট, কলকাতা – ৭০০০৭৩, ৮ সেপ্টেম্বর ২০২৬। প্রাপক সম্পাদক, দ্য টাইমস অফ ইন্ডিয়া, কলকাতা। বিষয়: উৎসবের সময় মাইক্রোফোন ও লাউডস্পিকারের অতিরিক্ত ব্যবহার। মহোদয়, আমি আমাদের শহরের একটি ক্রমবর্ধমান সমস্যা নিয়ে গভীর উদ্বেগ প্রকাশ করতে চাই। উৎসবের সময় মাইক্রোফোন ও লাউডস্পিকার এলোমেলোভাবে এবং অতিরিক্ত মাত্রায় ব্যবহার করা হয়। সেগুলো সর্বত্র লাগানো হয় এবং সকাল থেকে মধ্যরাত পর্যন্ত খুব জোরে গান বাজানো হয়। বৃদ্ধ ও অসুস্থরা ঠিকমতো ঘুমাতে বা বিশ্রাম নিতে পারেন না। ছাত্রছাত্রীরা পড়াশোনায় বড় সমস্যার সম্মুখীন হন। অধিকাংশ মানুষই অবিরাম শব্দদূষণের ক্ষতিকর প্রভাব সম্পর্কে সচেতন নন। আমি কর্তৃপক্ষকে অনুরোধ করি তাৎক্ষণিক পদক্ষেপ নিতে এবং অনুমোদিত সীমার মধ্যে লাউডস্পিকারের ব্যবহার সীমিত করতে। আপনার বিশ্বস্ত, সুমন ঘোষ।</div>
+  </div>
+</div>
+<!-- ==================== 5 ==================== -->
+<div class="card" id="f5">
+  <div class="card-header">5. Pollution Caused by Polythene</div>
+  <div class="card-body">
+    <div class="question"><strong>Question:</strong> Write a letter to the editor of an English Daily expressing your concern over the pollution caused by frequent use of polythene. (within 100 words) [Points — Large scale use of plastic — choking drainage system — waterlogging on roads — pollution of land and ocean — use of substitutes like jute bags and paper bags.]</div>
+    <div class="letter-box">
+From
+Ananya Sen
+56, Gariahat Road
+Kolkata – 700019
+8 September 2026
+To
+The Editor
+The Hindu
+Kolkata
+Subject: Pollution caused by frequent use of polythene bags
+Sir,
+Through your columns I wish to express my deep concern over a serious environmental problem.
+Polythene bags are used on a large scale in our daily life. These bags choke the drainage system and cause severe <span class="word">waterlogging<span class="tooltip">জলাবদ্ধতা</span></span> on roads during rains. They pollute both land and the ocean. Animals often swallow polythene pieces and die a painful death.
+We must stop using polythene immediately and switch to environment-friendly substitutes like jute bags and paper bags. The government should ban polythene completely and create mass awareness.
+Yours faithfully,
+Ananya Sen
+    </div>
+    <div class="bengali"><strong>Bengali Meaning:</strong> প্রেরক অনন্যা সেন, ৫৬, গড়িয়াহাট রোড, কলকাতা – ৭০০০১৯, ৮ সেপ্টেম্বর ২০২৬। প্রাপক সম্পাদক, দ্য হিন্দু, কলকাতা। বিষয়: পলিথিন ব্যাগের ঘন ঘন ব্যবহারে দূষণ। মহোদয়, আপনার পত্রিকার মাধ্যমে আমি একটি গুরুতর পরিবেশগত সমস্যা নিয়ে গভীর উদ্বেগ প্রকাশ করতে চাই। আমাদের দৈনন্দিন জীবনে পলিথিন ব্যাগ ব্যাপকভাবে ব্যবহার করা হয়। এই ব্যাগগুলো নর্দমা ব্যবস্থা আটকে দেয় এবং বৃষ্টিতে রাস্তায় মারাত্মক জলাবদ্ধতা সৃষ্টি করে। এগুলো স্থল ও মহাসাগর উভয়কেই দূষিত করে। প্রাণীরা প্রায়ই পলিথিনের টুকরো গিলে যন্ত্রণাদায়ক মৃত্যুবরণ করে। আমাদের অবিলম্বে পলিথিন ব্যবহার বন্ধ করে পাটের ব্যাগ ও কাগজের ব্যাগের মতো পরিবেশবান্ধব বিকল্পে যেতে হবে। সরকারকে পলিথিন সম্পূর্ণ নিষিদ্ধ করতে হবে এবং ব্যাপক সচেতনতা তৈরি করতে হবে। আপনার বিশ্বস্ত, অনন্যা সেন।</div>
+  </div>
+</div>
+<!-- ==================== 6 ==================== -->
+<div class="card" id="f6">
+  <div class="card-header">6. Increasing Number of Road Accidents</div>
+  <div class="card-body">
+    <div class="question"><strong>Question:</strong> Write a letter (within 100 words) to the Editor of an English daily expressing your concern at the increasing number of road accidents.</div>
+    <div class="letter-box">
+From
+Rahul Chatterjee
+34, Ballygunge Circular Road
+Kolkata – 700019
+8 September 2026
+To
+The Editor
+The Telegraph
+Kolkata
+Subject: Increasing number of road accidents in our city
+Sir,
+I am writing this letter to express my deep concern at the alarming rise in road accidents.
+<span class="word">Reckless<span class="tooltip">বেপরোয়া</span></span> driving, over-speeding and frequent violation of traffic rules are the main causes. Many young lives are lost every day on the roads. The condition of roads is also poor in several areas.
+Strict enforcement of traffic rules, better road maintenance and regular awareness campaigns are urgently needed. The authorities must take immediate and effective action to reduce the number of road accidents and save precious lives.
+Yours faithfully,
+Rahul Chatterjee
+    </div>
+    <div class="bengali"><strong>Bengali Meaning:</strong> প্রেরক রাহুল চ্যাটার্জি, ৩৪, বালিগঞ্জ সার্কুলার রোড, কলকাতা – ৭০০০১৯, ৮ সেপ্টেম্বর ২০২৬। প্রাপক সম্পাদক, দ্য টেলিগ্রাফ, কলকাতা। বিষয়: আমাদের শহরে সড়ক দুর্ঘটনার ক্রমবর্ধমান সংখ্যা। মহোদয়, সড়ক দুর্ঘটনার উদ্বেগজনক বৃদ্ধি নিয়ে গভীর উদ্বেগ প্রকাশ করতে আমি এই চিঠি লিখছি। বেপরোয়া গাড়ি চালানো, অতিরিক্ত গতি এবং ট্রাফিক নিয়মের ঘন ঘন লঙ্ঘনই প্রধান কারণ। প্রতিদিন রাস্তায় অনেক তরুণ জীবন হারিয়ে যাচ্ছে। বেশ কয়েকটি এলাকায় রাস্তার অবস্থাও খারাপ। ট্রাফিক নিয়মের কঠোর প্রয়োগ, রাস্তার উন্নত রক্ষণাবেক্ষণ এবং নিয়মিত সচেতনতা অভিযান জরুরি প্রয়োজন। কর্তৃপক্ষকে সড়ক দুর্ঘটনার সংখ্যা কমাতে এবং মূল্যবান জীবন বাঁচাতে তাৎক্ষণিক ও কার্যকর ব্যবস্থা নিতে হবে। আপনার বিশ্বস্ত, রাহুল চ্যাটার্জি।</div>
+  </div>
+</div>
+<!-- ==================== 7 ==================== -->
+<div class="card" id="f7">
+  <div class="card-header">7. Appeal for Donation for Cyclone Victims</div>
+  <div class="card-body">
+    <div class="question"><strong>Question:</strong> Write a letter to the Editor of a newspaper appealing to the public for donation for the child victims of a cyclone using the following points: [Hints: Cyclone in Contai sub-division, Purba Medinipur - suffering of people - insufficient relief work - public help to raise fund.]</div>
+    <div class="letter-box">
+From
+Sneha Mukherjee
+89, Salt Lake
+Kolkata – 700064
+8 September 2026
+To
+The Editor
+Anandabazar Patrika
+Kolkata
+Subject: Appeal for donation for child victims of the recent cyclone
+Sir,
+A severe cyclone has recently devastated Contai sub-division in Purba Medinipur.
+Thousands of people, especially children, are suffering from acute shortage of food, clothes and shelter. Many children have lost their parents and homes. Relief work undertaken by the government is still <span class="word">insufficient<span class="tooltip">অপর্যাপ্ত</span></span>.
+I appeal to the generous public through your newspaper to come forward and donate money, clothes and food for these helpless child victims. Together we can help them rebuild their broken lives.
+Yours faithfully,
+Sneha Mukherjee
+    </div>
+    <div class="bengali"><strong>Bengali Meaning:</strong> প্রেরক স্নেহা মুখার্জি, ৮৯, সল্ট লেক, কলকাতা – ৭০০০৬৪, ৮ সেপ্টেম্বর ২০২৬। প্রাপক সম্পাদক, আনন্দবাজার পত্রিকা, কলকাতা। বিষয়: সাম্প্রতিক ঘূর্ণিঝড়ে ক্ষতিগ্রস্ত শিশুদের জন্য অনুদানের আবেদন। মহোদয়, এক প্রবল ঘূর্ণিঝড় সম্প্রতি পূর্ব মেদিনীপুরের কাঁথি মহকুমাকে ধ্বংস করেছে। হাজার হাজার মানুষ, বিশেষ করে শিশুরা খাবার, কাপড় ও আশ্রয়ের তীব্র অভাবে ভুগছে। অনেক শিশু তাদের বাবা-মা ও বাড়ি হারিয়েছে। সরকারের ত্রাণ কাজ এখনও অপর্যাপ্ত। আমি আপনার পত্রিকার মাধ্যমে উদার জনসাধারণের কাছে আবেদন জানাচ্ছি এগিয়ে এসে এই অসহায় শিশুদের জন্য টাকা, কাপড় ও খাবার দান করতে। একসাথে আমরা তাদের ভেঙে পড়া জীবন পুনর্গঠনে সাহায্য করতে পারি। আপনার বিশ্বস্ত, স্নেহা মুখার্জি।</div>
+  </div>
+</div>
+<!-- ==================== 8 ==================== -->
+<div class="card" id="f8">
+  <div class="card-header">8. Misuse of Smartphones among Students</div>
+  <div class="card-body">
+    <div class="question"><strong>Question:</strong> Write a letter to the editor of an English newspaper expressing your concern about the misuse of smart phones among students. [you may use the points: addiction among young people - health issues like increased stress, sleep disruption, lack of concentration, eye strain - social isolation, lack of communication - distraction - inappropriate content - road safety hampered - parent and school should control by constant motivation]</div>
+    <div class="letter-box">
+From
+Arjun Das
+15, Jadavpur
+Kolkata – 700032
+8 September 2026
+To
+The Editor
+The Telegraph
+Kolkata
+Subject: Growing misuse of smartphones among students
+Sir,
+I wish to express my serious concern about the growing misuse of smartphones among students.
+Many young people have become <span class="word">addicted<span class="tooltip">আসক্ত</span></span> to mobile phones. This addiction causes increased stress, sleep disruption, lack of concentration and severe eye strain. Students become socially isolated and lose the habit of face-to-face communication. Phones constantly distract them from studies and expose them to inappropriate content. Even road safety is hampered as many walk while using phones.
+Parents and schools should control this dangerous addiction through constant motivation and strict rules.
+Yours faithfully,
+Arjun Das
+    </div>
+    <div class="bengali"><strong>Bengali Meaning:</strong> প্রেরক অর্জুন দাস, ১৫, যাদবপুর, কলকাতা – ৭০০০৩২, ৮ সেপ্টেম্বর ২০২৬। প্রাপক সম্পাদক, দ্য টেলিগ্রাফ, কলকাতা। বিষয়: ছাত্রছাত্রীদের মধ্যে স্মার্টফোনের ক্রমবর্ধমান অপব্যবহার। মহোদয়, ছাত্রছাত্রীদের মধ্যে স্মার্টফোনের ক্রমবর্ধমান অপব্যবহার নিয়ে আমি গুরুতর উদ্বেগ প্রকাশ করতে চাই। অনেক তরুণ মোবাইল ফোনে আসক্ত হয়ে পড়েছে। এই আসক্তি মানসিক চাপ বাড়ায়, ঘুমের ব্যাঘাত ঘটায়, মনোযোগের অভাব ও তীব্র চোখের চাপ সৃষ্টি করে। ছাত্রছাত্রীরা সামাজিকভাবে বিচ্ছিন্ন হয়ে পড়ে এবং মুখোমুখি যোগাযোগের অভ্যাস হারায়। ফোন তাদের পড়াশোনা থেকে ক্রমাগত বিভ্রান্ত করে এবং অনুপযুক্ত বিষয়বস্তুর সংস্পর্শে আনে। এমনকি রাস্তার নিরাপত্তাও ব্যাহত হয় কারণ অনেকে ফোন ব্যবহার করতে করতে হাঁটে। বাবা-মা ও স্কুলকে ধারাবাহিক উদ্বুদ্ধকরণ ও কঠোর নিয়মের মাধ্যমে এই বিপজ্জনক আসক্তি নিয়ন্ত্রণ করতে হবে। আপনার বিশ্বস্ত, অর্জুন দাস।</div>
+  </div>
+</div>
+<!-- ==================== 9 ==================== -->
+<div class="card" id="f9">
+  <div class="card-header">9. Insanitary Condition of Village</div>
+  <div class="card-body">
+    <div class="question"><strong>Question:</strong> Write a letter to the Editor of an English newspaper about the insanitary condition of your town/village. Mention the details of the insanitary condition, the effect on the people and the solution in detail.</div>
+    <div class="letter-box">
+From
+Meera Debnath
+Village – Shyamnagar
+P.O. – Shyamnagar
+Dist. – North 24 Parganas
+8 September 2026
+To
+The Editor
+The Statesman
+Kolkata
+Subject: Insanitary condition of our village
+Sir,
+I want to bring to your kind notice the highly insanitary condition of our village.
+Garbage is dumped openly on the roads. Drains remain choked for weeks. Stagnant water becomes a perfect breeding ground for mosquitoes. Foul smell fills the entire air. People suffer from diarrhoea, malaria and other diseases. Children are the worst sufferers.
+Regular cleaning of garbage and drains, spraying of insecticides and awareness programmes among villagers are urgently needed. The local authority must take immediate action.
+Yours faithfully,
+Meera Debnath
+    </div>
+    <div class="bengali"><strong>Bengali Meaning:</strong> প্রেরক মীরা দেবনাথ, গ্রাম – শ্যামনগর, ডাকঘর – শ্যামনগর, জেলা – উত্তর ২৪ পরগণা, ৮ সেপ্টেম্বর ২০২৬। প্রাপক সম্পাদক, দ্য স্টেটসম্যান, কলকাতা। বিষয়: আমাদের গ্রামের অস্বাস্থ্যকর অবস্থা। মহোদয়, আমাদের গ্রামের অত্যন্ত অস্বাস্থ্যকর অবস্থা আপনার সদয় নজরে আনতে চাই। রাস্তায় খোলাখুলি আবর্জনা ফেলা হয়। নর্দমা সপ্তাহের পর সপ্তাহ আটকে থাকে। জমে থাকা জল মশার আদর্শ প্রজনন ক্ষেত্র হয়ে ওঠে। দুর্গন্ধে পুরো বাতাস ভরে যায়। মানুষ ডায়রিয়া, ম্যালেরিয়া ও অন্যান্য রোগে ভোগে। শিশুরা সবচেয়ে বেশি ক্ষতিগ্রস্ত। আবর্জনা ও নর্দমা নিয়মিত পরিষ্কার, কীটনাশক স্প্রে এবং গ্রামবাসীদের মধ্যে সচেতনতা কর্মসূচি জরুরি প্রয়োজন। স্থানীয় কর্তৃপক্ষকে তাৎক্ষণিক ব্যবস্থা নিতে হবে। আপনার বিশ্বস্ত, মীরা দেবনাথ।</div>
+  </div>
+</div>
+<!-- ==================== 10 ==================== -->
+<div class="card" id="f10">
+  <div class="card-header">10. Thoughtless Use of Loudspeakers</div>
+  <div class="card-body">
+    <div class="question"><strong>Question:</strong> Write a letter (within 100 words) to the editor of an English daily about the disturbances caused by the thoughtless use of loudspeakers.</div>
+    <div class="letter-box">
+From
+Kabir Hossain
+67, Park Circus
+Kolkata – 700017
+8 September 2026
+To
+The Editor
+The Telegraph
+Kolkata
+Subject: Disturbances caused by thoughtless use of loudspeakers
+Sir,
+I wish to draw the attention of the public and the authorities to a serious problem.
+Loudspeakers are used <span class="word">thoughtlessly<span class="tooltip">চিন্তাহীনভাবে</span></span> during parties, festivals and religious programmes. High-volume music continues till late night. Patients in nearby hospitals and students preparing for examinations suffer greatly. Peaceful sleep is disturbed and the general peace of the locality is broken.
+The authority should enforce the noise pollution rules strictly and take firm action against the offenders without further delay.
+Yours faithfully,
+Kabir Hossain
+    </div>
+    <div class="bengali"><strong>Bengali Meaning:</strong> প্রেরক কবির হোসেন, ৬৭, পার্ক সার্কাস, কলকাতা – ৭০০০১৭, ৮ সেপ্টেম্বর ২০২৬। প্রাপক সম্পাদক, দ্য টেলিগ্রাফ, কলকাতা। বিষয়: লাউডস্পিকারের চিন্তাহীন ব্যবহারে বিঘ্ন। মহোদয়, আমি জনসাধারণ ও কর্তৃপক্ষের দৃষ্টি আকর্ষণ করতে চাই একটি গুরুতর সমস্যার দিকে। পার্টি, উৎসব ও ধর্মীয় অনুষ্ঠানে লাউডস্পিকার চিন্তাহীনভাবে ব্যবহার করা হয়। রাত পর্যন্ত জোরে সঙ্গীত চলতে থাকে। কাছের হাসপাতালের রোগী ও পরীক্ষার প্রস্তুতিরত ছাত্রছাত্রীরা খুব কষ্ট পান। শান্তিপূর্ণ ঘুম ব্যাহত হয় এবং এলাকার সাধারণ শান্তি নষ্ট হয়। কর্তৃপক্ষকে শব্দদূষণের নিয়ম কঠোরভাবে প্রয়োগ করতে হবে এবং আর কোনো দেরি না করে অপরাধীদের বিরুদ্ধে দৃঢ় ব্যবস্থা নিতে হবে। আপনার বিশ্বস্ত, কবির হোসেন।</div>
+  </div>
+</div>
+<!-- ==================== 11 ==================== -->
+<div class="card" id="f11">
+  <div class="card-header">11. Prayer for Construction of Cycle Stand</div>
+  <div class="card-body">
+    <div class="question"><strong>Question:</strong> Write a letter (within 100 words) to the headmaster of your school praying for the construction of a cycle stand.</div>
+    <div class="letter-box">
+From
+Sourav Mondal
+Class X, Section B
+ABC High School
+Kolkata
+8 September 2026
+To
+The Headmaster
+ABC High School
+Kolkata
+Subject: Prayer for construction of a covered cycle stand
+Respected Sir,
+Most of the students of our school come by bicycle every day.
+At present there is no proper cycle stand in the school campus. Cycles are kept under the open sky or tied to trees. They get damaged due to rain and heat. Sometimes cycles are also stolen.
+I request you to kindly construct a covered cycle stand for the safety and convenience of the students. We shall remain ever grateful to you.
+Yours obediently,
+Sourav Mondal
+    </div>
+    <div class="bengali"><strong>Bengali Meaning:</strong> প্রেরক সৌরভ মণ্ডল, দশম শ্রেণি, বি বিভাগ, এবিসি হাই স্কুল, কলকাতা, ৮ সেপ্টেম্বর ২০২৬। প্রাপক প্রধান শিক্ষক, এবিসি হাই স্কুল, কলকাতা। বিষয়: ছাউনিযুক্ত সাইকেল স্ট্যান্ড নির্মাণের জন্য প্রার্থনা। সম্মানিত মহোদয়, আমাদের স্কুলের বেশিরভাগ ছাত্রছাত্রী প্রতিদিন সাইকেলে আসে। বর্তমানে স্কুল ক্যাম্পাসে কোনো সঠিক সাইকেল স্ট্যান্ড নেই। সাইকেল খোলা আকাশের নিচে রাখা হয় বা গাছে বাঁধা হয়। বৃষ্টি ও রোদের কারণে সেগুলো নষ্ট হয়। কখনো কখনো সাইকেল চুরিও হয়। আমি আপনাকে অনুরোধ করছি ছাত্রছাত্রীদের নিরাপত্তা ও সুবিধার জন্য একটি ছাউনিযুক্ত সাইকেল স্ট্যান্ড নির্মাণ করতে। আমরা আপনার কাছে চিরকৃতজ্ঞ থাকব। আপনার বাধ্য, সৌরভ মণ্ডল।</div>
+  </div>
+</div>
+<!-- ==================== 12 ==================== -->
+<div class="card" id="f12">
+  <div class="card-header">12. Permission for Educational Excursion</div>
+  <div class="card-body">
+    <div class="question"><strong>Question:</strong> Write a letter within 100 words requesting your father to permit you to join an educational excursion arranged by your school: [Points: date, time and place — necessity — participation of the students — your keenness — money required.]</div>
+    <div class="letter-box">
+From
+Ritam Saha
+Hostel Room No. 12
+XYZ School
+Kolkata
+8 September 2026
+To
+Sri Bimal Saha
+45, Lake Gardens
+Kolkata – 700045
+Subject: Permission to join the educational excursion
+Dear Father,
+Our school has arranged an educational excursion to the Indian Museum and Victoria Memorial on 15th September.
+We shall leave the school at 8 a.m. and return by 5 p.m. Almost all my classmates are participating. This excursion will help us understand history in a practical way. I am very <span class="word">keen<span class="tooltip">আগ্রহী</span></span> to join it.
+The total expense is only three hundred rupees. Please give me permission and send the required money.
+Yours affectionately,
+Ritam
+    </div>
+    <div class="bengali"><strong>Bengali Meaning:</strong> প্রেরক ঋতম সাহা, হোস্টেল রুম নং ১২, এক্সওয়াইজেড স্কুল, কলকাতা, ৮ সেপ্টেম্বর ২০২৬। প্রাপক শ্রী বিমল সাহা, ৪৫, লেক গার্ডেনস, কলকাতা – ৭০০০৪৫। বিষয়: শিক্ষামূলক ভ্রমণে যোগদানের অনুমতি। প্রিয় বাবা, আমাদের স্কুল ১৫ই সেপ্টেম্বর ইন্ডিয়ান মিউজিয়াম ও ভিক্টোরিয়া মেমোরিয়ালে একটি শিক্ষামূলক ভ্রমণের আয়োজন করেছে। আমরা সকাল ৮টায় স্কুল থেকে বের হব এবং বিকেল ৫টার মধ্যে ফিরব। আমার প্রায় সব সহপাঠী অংশ নিচ্ছে। এই ভ্রমণ আমাদের ইতিহাস ব্যবহারিকভাবে বুঝতে সাহায্য করবে। আমি এতে যোগ দিতে খুব আগ্রহী। মোট খরচ মাত্র তিনশো টাকা। অনুগ্রহ করে আমাকে অনুমতি দিন এবং প্রয়োজনীয় টাকা পাঠান। তোমার স্নেহের, ঋতম।</div>
+  </div>
+</div>
+<!-- ==================== 13 ==================== -->
+<div class="card" id="f13">
+  <div class="card-header">13. Loss of Mobile Phone</div>
+  <div class="card-body">
+    <div class="question"><strong>Question:</strong> Write a letter to the Inspector-in-Charge of yours local police station complaining about the loss of your mobile phone in your area. Give details of the phone and the way in which it was lost.</div>
+    <div class="letter-box">
+From
+Debashis Dutta
+12/A, Garia Main Road
+Kolkata – 700084
+8 September 2026
+To
+The Inspector-in-Charge
+Garia Police Station
+Kolkata – 700084
+Subject: Report of loss of mobile phone
+Sir,
+I wish to report the loss of my mobile phone that occurred yesterday.
+Yesterday evening at about 6.30 p.m. while I was returning home from the market near Garia Bus Stand, my phone was <span class="word">pick-pocketed<span class="tooltip">পকেটমার</span></span> from my pocket. It is a black Samsung Galaxy A54. The IMEI number is 356789123456789 and the SIM number is 9876543210.
+I request you to kindly investigate the matter and help me recover my phone at the earliest.
+Yours faithfully,
+Debashis Dutta
+    </div>
+    <div class="bengali"><strong>Bengali Meaning:</strong> প্রেরক দেবাশিস দত্ত, ১২/এ, গড়িয়া মেইন রোড, কলকাতা – ৭০০০৮৪, ৮ সেপ্টেম্বর ২০২৬। প্রাপক অধিস্থানিক অফিসার, গড়িয়া থানা, কলকাতা – ৭০০০৮৪। বিষয়: মোবাইল ফোন হারানোর রিপোর্ট। মহোদয়, আমি গতকাল আমার মোবাইল ফোন হারানোর বিষয়টি রিপোর্ট করতে চাই। গতকাল সন্ধ্যা প্রায় ৬.৩০টায় গড়িয়া বাস স্ট্যান্ডের কাছে বাজার থেকে বাড়ি ফেরার সময় আমার পকেট থেকে ফোন পকেটমার হয়ে যায়। এটি একটি কালো স্যামসাং গ্যালাক্সি এ৫৪। আইএমইআই নম্বর ৩৫৬৭৮৯১২৩৪৫৬৭৮৯ এবং সিম নম্বর ৯৮৭৬৫৪৩২১০। আপনাকে অনুরোধ করছি বিষয়টি তদন্ত করে যথাশীঘ্র আমার ফোন উদ্ধারে সাহায্য করতে। আপনার বিশ্বস্ত, দেবাশিস দত্ত।</div>
+  </div>
+</div>
+<!-- ==================== 14 ==================== -->
+<div class="card" id="f14">
+  <div class="card-header">14. Lost Aadhaar Card – General Diary</div>
+  <div class="card-body">
+    <div class="question"><strong>Question:</strong> Suppose you have lost your Aadhar Card. Now write a letter to the Officer-in-Charge of your local police station for a General Diary (GD) and for its recovery. You should mention the following points. [Points: date, time and place of loss — your Aadhar Unique Identification Number your name in capital letters — parents name — your address — its xerox copy]</div>
+    <div class="letter-box">
+From
+PRIYA SHARMA
+D/O – Sri Ramesh Sharma
+25, Lake Town
+Kolkata – 700089
+8 September 2026
+To
+The Officer-in-Charge
+Lake Town Police Station
+Kolkata – 700089
+Subject: Request for General Diary regarding loss of Aadhaar Card
+Sir,
+I lost my Aadhaar Card yesterday and request you to register a General Diary.
+I lost it on 7th September 2026 at about 4 p.m. near Lake Town Market. My Aadhaar Unique Identification Number is 1234 5678 9012. My name is PRIYA SHARMA. My father’s name is Sri Ramesh Sharma. My permanent address is 25, Lake Town, Kolkata – 700089. I am enclosing a xerox copy of the Aadhaar Card for your ready reference.
+Kindly register a GD and help me in its early recovery.
+Yours faithfully,
+Priya Sharma
+    </div>
+    <div class="bengali"><strong>Bengali Meaning:</strong> প্রেরক প্রিয়া শর্মা, কন্যা – শ্রী রমেশ শর্মা, ২৫, লেক টাউন, কলকাতা – ৭০০০৮৯, ৮ সেপ্টেম্বর ২০২৬। প্রাপক অধিস্থানিক অফিসার, লেক টাউন থানা, কলকাতা – ৭০০০৮৯। বিষয়: আধার কার্ড হারানোর জন্য জেনারেল ডায়েরি (জিডি) করার অনুরোধ। মহোদয়, গতকাল আমার আধার কার্ড হারিয়ে গেছে এবং আমি একটি জেনারেল ডায়েরি রেজিস্টার করার অনুরোধ করছি। আমি এটি ৭ সেপ্টেম্বর ২০২৬ তারিখে বিকেল প্রায় ৪টায় লেক টাউন মার্কেটের কাছে হারিয়েছি। আমার আধার ইউনিক আইডেন্টিফিকেশন নম্বর ১২৩৪ ৫৬৭৮ ৯০১২। আমার নাম প্রিয়া শর্মা। আমার বাবার নাম শ্রী রমেশ শর্মা। আমার স্থায়ী ঠিকানা ২৫, লেক টাউন, কলকাতা – ৭০০০৮৯। আপনার সুবিধার জন্য আমি আধার কার্ডের জেরক্স কপি সংযুক্ত করছি। অনুগ্রহ করে একটি জিডি রেজিস্টার করুন এবং দ্রুত উদ্ধারে সাহায্য করুন। আপনার বিশ্বস্ত, প্রিয়া শর্মা।</div>
+  </div>
+</div>
+
+<!-- ==================== INFORMAL LETTERS ==================== -->
+<div class="section-title" id="informal">✉️ Informal / Personal Letters – All 12 Answers</div>
+<nav class="item-nav" style="position:static; margin-bottom:16px; border-radius:8px;">
+  <a href="#i1">1</a><a href="#i2">2</a><a href="#i3">3</a><a href="#i4">4</a>
+  <a href="#i5">5</a><a href="#i6">6</a><a href="#i7">7</a><a href="#i8">8</a>
+  <a href="#i9">9</a><a href="#i10">10</a><a href="#i11">11</a><a href="#i12">12</a>
+</nav>
+<!-- ==================== 1 ==================== -->
+<div class="card" id="i1">
+  <div class="card-header">1. Advice against Social Media Addiction</div>
+  <div class="card-body">
+    <div class="question"><strong>Question:</strong> Write a letter to your younger brother (within 100 words) who lives in a hostel advising him not to get addicted to the social networking sites like Facebook, Whatsapp, Instagram etc.<br>[Hints: value of time — importance of career — restraintment from sense gratification — key to success.]</div>
+    <div class="letter-box">12, Station Road
+Kolkata – 700012
+8 September 2026
+My dear Rahul,
+I hope you are well in the hostel. I am writing this letter with a special purpose.
+I have heard that you spend too much time on Facebook, WhatsApp and Instagram. Time is very <span class="word">precious<span class="tooltip">মূল্যবান</span></span>. Once lost, it never returns. Your career is more important than temporary pleasure. Social media gives only <span class="word">sense gratification<span class="tooltip">ইন্দ্রিয়তৃপ্তি</span></span>. It cannot help you succeed in life. You must show <span class="word">restraint<span class="tooltip">সংযম</span></span> and use your time for studies. Hard work and discipline are the real keys to success.
+Please reduce the use of these sites and concentrate on your books. I hope you will listen to me.
+Yours affectionately,
+Ankit</div>
+    <div class="bengali"><strong>Bengali Meaning:</strong> ১২, স্টেশন রোড, কলকাতা – ৭০০০১২, ৮ সেপ্টেম্বর ২০২৬। প্রিয় রাহুল, আশা করি হোস্টেলে তুমি ভালো আছো। আমি একটি বিশেষ উদ্দেশ্য নিয়ে এই চিঠি লিখছি। শুনেছি তুমি ফেসবুক, হোয়াটসঅ্যাপ ও ইনস্টাগ্রামে অনেক সময় ব্যয় করছো। সময় খুব মূল্যবান। একবার চলে গেলে আর ফিরে আসে না। তোমার ক্যারিয়ার সাময়িক আনন্দের চেয়ে অনেক বেশি গুরুত্বপূর্ণ। সোশ্যাল মিডিয়া শুধু ইন্দ্রিয়তৃপ্তি দেয়। এটি তোমাকে জীবনে সফল হতে সাহায্য করতে পারে না। তোমাকে সংযম দেখাতে হবে এবং পড়াশোনার জন্য সময় ব্যবহার করতে হবে। কঠোর পরিশ্রম ও শৃঙ্খলাই সফলতার আসল চাবিকাঠি। অনুগ্রহ করে এই সাইটগুলোর ব্যবহার কমিয়ে বইতে মনোযোগ দাও। আশা করি তুমি আমার কথা শুনবে। তোমার স্নেহের, অঙ্কিত।</div>
+  </div>
+</div>
+<!-- ==================== 2 ==================== -->
+<div class="card" id="i2">
+  <div class="card-header">2. Visit to a Museum</div>
+  <div class="card-body">
+    <div class="question"><strong>Question:</strong> Write a letter to your friend in about 100 words describing your visit to a museum.</div>
+    <div class="letter-box">45, Park Street
+Howrah – 711101
+8 September 2026
+My dear Soumya,
+I hope this letter finds you in good health. I want to share with you the joy of my recent visit.
+Last Sunday I visited the Indian Museum with my parents. We went by bus and reached there at 10 a.m. The museum is very large and well maintained. I saw ancient coins, <span class="word">sculptures<span class="tooltip">ভাস্কর্য</span></span>, fossils and beautiful paintings. The Egyptian mummy and the huge dinosaur skeleton attracted me the most. I spent almost four hours there and learned many new things about history and science.
+It was a <span class="word">memorable<span class="tooltip">স্মরণীয়</span></span> experience. You must visit the museum when you come to Kolkata.
+Yours sincerely,
+Priya</div>
+    <div class="bengali"><strong>Bengali Meaning:</strong> ৪৫, পার্ক স্ট্রিট, হাওড়া – ৭১১১০১, ৮ সেপ্টেম্বর ২০২৬। প্রিয় সৌম্য, আশা করি এই চিঠি পেয়ে তুমি ভালো আছো। আমি আমার সাম্প্রতিক ভ্রমণের আনন্দ তোমার সঙ্গে ভাগ করে নিতে চাই। গত রবিবার আমি বাবা-মার সঙ্গে ইন্ডিয়ান মিউজিয়াম ঘুরতে গিয়েছিলাম। আমরা বাসে করে গিয়ে সকাল ১০টায় পৌঁছেছিলাম। জাদুঘরটি খুব বড় এবং ভালোভাবে রক্ষণাবেক্ষণ করা। আমি প্রাচীন মুদ্রা, ভাস্কর্য, জীবাশ্ম ও সুন্দর চিত্রকর্ম দেখেছি। মিশরীয় মমি ও বিশাল ডাইনোসরের কঙ্কাল আমাকে সবচেয়ে বেশি আকর্ষণ করেছিল। আমি সেখানে প্রায় চার ঘণ্টা কাটিয়ে ইতিহাস ও বিজ্ঞান সম্পর্কে অনেক নতুন জিনিস শিখেছি। এটি একটি স্মরণীয় অভিজ্ঞতা ছিল। তুমি কলকাতায় এলে অবশ্যই জাদুঘর দেখতে যেয়ো। তোমার বিশ্বস্ত, প্রিয়া।</div>
+  </div>
+</div>
+<!-- ==================== 3 ==================== -->
+<div class="card" id="i3">
+  <div class="card-header">3. Advice to Visit Public Library</div>
+  <div class="card-body">
+    <div class="question"><strong>Question:</strong> Write a letter to your friend [within 100 words] advising her/him to visit the public library in her/his locality as frequently as possible.</div>
+    <div class="letter-box">78, Lake Road
+Kolkata – 700029
+8 September 2026
+My dear Ananya,
+I hope you are fine. I am writing to give you a useful advice.
+You should visit the public library in your locality as frequently as possible. A library is a <span class="word">treasure house<span class="tooltip">ভাণ্ডার</span></span> of knowledge. There you will find books on every subject. Reading regularly will improve your vocabulary and writing skill. It will also increase your general knowledge. In the quiet atmosphere of the library you can concentrate better. Many successful students make library their second home.
+Please form the habit of going there at least twice a week. It will help you a lot in your studies and future life.
+Yours affectionately,
+Ritam</div>
+    <div class="bengali"><strong>Bengali Meaning:</strong> ৭৮, লেক রোড, কলকাতা – ৭০০০২৯, ৮ সেপ্টেম্বর ২০২৬। প্রিয় অনন্যা, আশা করি তুমি ভালো আছো। আমি তোমাকে একটি উপকারী পরামর্শ দিতে চিঠি লিখছি। তোমার এলাকার পাবলিক লাইব্রেরিতে যতবার সম্ভব যেতে চেষ্টা করো। লাইব্রেরি জ্ঞানের ভাণ্ডার। সেখানে তুমি প্রতিটি বিষয়ের বই পাবে। নিয়মিত পড়া তোমার শব্দভাণ্ডার ও লেখার দক্ষতা বাড়াবে। এটি তোমার সাধারণ জ্ঞানও বাড়াবে। লাইব্রেরির শান্ত পরিবেশে তুমি আরও ভালো মনোযোগ দিতে পারবে। অনেক সফল ছাত্রছাত্রী লাইব্রেরিকে তাদের দ্বিতীয় বাড়ি করে তোলে। অনুগ্রহ করে সপ্তাহে অন্তত দুবার যাওয়ার অভ্যাস গড়ে তোলো। এটি তোমার পড়াশোনা ও ভবিষ্যৎ জীবনে অনেক সাহায্য করবে। তোমার স্নেহের, ঋতম।</div>
+  </div>
+</div>
+<!-- ==================== 4 ==================== -->
+<div class="card" id="i4">
+  <div class="card-header">4. Description of a Cultural Programme</div>
+  <div class="card-body">
+    <div class="question"><strong>Question:</strong> Write a letter (within 100 words) to your friend describing a cultural programme you have attended recently. Your letter should include the following points:- Name of the programme - venue - date - description of performances - your feelings.</div>
+    <div class="letter-box">23, College Street
+Kolkata – 700073
+8 September 2026
+My dear Suman,
+I hope you are well. I want to tell you about a wonderful cultural programme I attended recently.
+The programme was named “Rabindra Sandhya”. It was held at Rabindra Sadan on 5th September. There were beautiful dance performances, songs and recitations based on Tagore’s works. The light and sound arrangement was excellent. The artists performed with great skill and emotion. I enjoyed every moment. The whole atmosphere filled my heart with joy and peace.
+It was one of the best programmes I have ever seen. I wish you could have been with me.
+Yours sincerely,
+Arjun</div>
+    <div class="bengali"><strong>Bengali Meaning:</strong> ২৩, কলেজ স্ট্রিট, কলকাতা – ৭০০০৭৩, ৮ সেপ্টেম্বর ২০২৬। প্রিয় সুমন, আশা করি তুমি ভালো আছো। আমি সম্প্রতি যে চমৎকার সাংস্কৃতিক অনুষ্ঠান দেখেছি তা তোমাকে বলতে চাই। অনুষ্ঠানটির নাম ছিল “রবীন্দ্র সন্ধ্যা”। এটি ৫ই সেপ্টেম্বর রবীন্দ্র সদনে অনুষ্ঠিত হয়েছিল। রবীন্দ্রনাথের রচনার উপর ভিত্তি করে সুন্দর নৃত্য, গান ও আবৃত্তি ছিল। আলো ও শব্দের ব্যবস্থা চমৎকার ছিল। শিল্পীরা দক্ষতা ও আবেগের সঙ্গে পরিবেশন করেছিলেন। আমি প্রতিটি মুহূর্ত উপভোগ করেছি। পুরো পরিবেশ আমার হৃদয় আনন্দ ও শান্তিতে ভরিয়ে দিয়েছিল। এটি আমার দেখা সেরা অনুষ্ঠানগুলোর মধ্যে একটি। আমি চাই তুমিও আমার সঙ্গে থাকতে। তোমার বিশ্বস্ত, অর্জুন।</div>
+  </div>
+</div>
+<!-- ==================== 5 ==================== -->
+<div class="card" id="i5">
+  <div class="card-header">5. Plan for Vacation after Madhyamik</div>
+  <div class="card-body">
+    <div class="question"><strong>Question:</strong> Write a letter to your friend about your plan to spend the vacation after the Madhyamik Examination.</div>
+    <div class="letter-box">56, Gariahat Road
+Kolkata – 700019
+8 September 2026
+My dear Kabir,
+I hope you are preparing well for the Madhyamik Examination. I want to share my plan for the coming vacation.
+After the examination I shall first take complete rest for a few days. Then I shall visit my grandparents in the village. I also plan to join a short computer course. In the evening I shall play cricket with my friends. I want to read some story books and watch educational programmes on television. I shall also help my mother in household work.
+I hope these activities will <span class="word">refresh<span class="tooltip">সতেজ করা</span></span> my mind. What is your plan? Please write to me soon.
+Yours affectionately,
+Sourav</div>
+    <div class="bengali"><strong>Bengali Meaning:</strong> ৫৬, গড়িয়াহাট রোড, কলকাতা – ৭০০০১৯, ৮ সেপ্টেম্বর ২০২৬। প্রিয় কবির, আশা করি তুমি মাধ্যমিক পরীক্ষার জন্য ভালোভাবে প্রস্তুতি নিচ্ছো। আমি আসন্ন ছুটির পরিকল্পনা তোমার সঙ্গে ভাগ করে নিতে চাই। পরীক্ষার পর প্রথমে কয়েকদিন সম্পূর্ণ বিশ্রাম নেব। তারপর গ্রামে ঠাকুরদা-ঠাকুরমার কাছে যাব। আমি একটি সংক্ষিপ্ত কম্পিউটার কোর্সেও ভর্তি হওয়ার পরিকল্পনা করছি। সন্ধ্যায় বন্ধুদের সঙ্গে ক্রিকেট খেলব। কিছু গল্পের বই পড়ব এবং টেলিভিশনে শিক্ষামূলক অনুষ্ঠান দেখব। মাকে গৃহকর্মেও সাহায্য করব। আশা করি এই কাজগুলো আমার মন সতেজ করবে। তোমার পরিকল্পনা কী? শীঘ্রই চিঠি লিখো। তোমার স্নেহের, সৌরভ।</div>
+  </div>
+</div>
+<!-- ==================== 6 ==================== -->
+<div class="card" id="i6">
+  <div class="card-header">6. Advice not to use Mobile on Road</div>
+  <div class="card-body">
+    <div class="question"><strong>Question:</strong> Write a letter to your friend advising him/her not to use mobile phone on road and follow traffic.</div>
+    <div class="letter-box">34, Ballygunge Circular Road
+Kolkata – 700019
+8 September 2026
+My dear Debashis,
+I hope you are fine. I am writing this letter with great concern.
+I have seen many people using mobile phones while walking or crossing the road. This habit is very <span class="word">dangerous<span class="tooltip">বিপজ্জনক</span></span>. It reduces concentration and causes serious accidents. You must never use your phone on the road. Always follow the traffic rules. Look left and right before crossing. Use the zebra crossing and footpath. Your life is more precious than any call or message.
+Please be careful and advise others also. Safety must come first.
+Yours sincerely,
+Rahul</div>
+    <div class="bengali"><strong>Bengali Meaning:</strong> ৩৪, বালিগঞ্জ সার্কুলার রোড, কলকাতা – ৭০০০১৯, ৮ সেপ্টেম্বর ২০২৬। প্রিয় দেবাশিস, আশা করি তুমি ভালো আছো। আমি গভীর উদ্বেগ নিয়ে এই চিঠি লিখছি। আমি অনেককে রাস্তায় হাঁটতে বা রাস্তা পার হতে মোবাইল ফোন ব্যবহার করতে দেখেছি। এই অভ্যাস খুব বিপজ্জনক। এটি মনোযোগ কমায় এবং গুরুতর দুর্ঘটনার কারণ হয়। তুমি কখনো রাস্তায় ফোন ব্যবহার করবে না। সবসময় ট্রাফিক নিয়ম মেনে চলো। রাস্তা পার হওয়ার আগে বাঁদিকে ও ডানদিকে দেখো। জেব্রা ক্রসিং ও ফুটপাথ ব্যবহার করো। তোমার জীবন যেকোনো কল বা মেসেজের চেয়ে অনেক মূল্যবান। অনুগ্রহ করে সতর্ক থেকো এবং অন্যদেরও পরামর্শ দাও। নিরাপত্তাই প্রথম। তোমার বিশ্বস্ত, রাহুল।</div>
+  </div>
+</div>
+<!-- ==================== 7 ==================== -->
+<div class="card" id="i7">
+  <div class="card-header">7. Importance of Forests</div>
+  <div class="card-body">
+    <div class="question"><strong>Question:</strong> Write a letter (in about 100 words) to your friend highlighting the importance of forests maintaining ecological balance and suggesting steps to protect them.</div>
+    <div class="letter-box">89, Salt Lake
+Kolkata – 700064
+8 September 2026
+My dear Meera,
+I hope you are well. Today I want to write about a very important subject.
+Forests play a vital role in maintaining <span class="word">ecological balance<span class="tooltip">পরিবেশগত ভারসাম্য</span></span>. They give us oxygen, control climate and prevent soil erosion. Forests are the home of many animals and birds. Without forests life on earth will become impossible. We must protect them. We should stop cutting trees, plant more saplings and create awareness among people. The government must also take strict action against illegal cutting of trees.
+Let us all work together to save our forests for future generations.
+Yours affectionately,
+Sneha</div>
+    <div class="bengali"><strong>Bengali Meaning:</strong> ৮৯, সল্ট লেক, কলকাতা – ৭০০০৬৪, ৮ সেপ্টেম্বর ২০২৬। প্রিয় মীরা, আশা করি তুমি ভালো আছো। আজ আমি একটি খুব গুরুত্বপূর্ণ বিষয় নিয়ে লিখতে চাই। বন পরিবেশগত ভারসাম্য বজায় রাখতে গুরুত্বপূর্ণ ভূমিকা পালন করে। এগুলো আমাদের অক্সিজেন দেয়, জলবায়ু নিয়ন্ত্রণ করে এবং মাটির ক্ষয় রোধ করে। বন অনেক প্রাণী ও পাখির আবাসস্থল। বন ছাড়া পৃথিবীতে জীবন অসম্ভব হয়ে পড়বে। আমাদের এগুলো রক্ষা করতে হবে। গাছ কাটা বন্ধ করতে হবে, আরও চারা লাগাতে হবে এবং মানুষের মধ্যে সচেতনতা তৈরি করতে হবে। সরকারকেও অবৈধ গাছ কাটার বিরুদ্ধে কঠোর ব্যবস্থা নিতে হবে। আসুন আমরা সবাই মিলে ভবিষ্যৎ প্রজন্মের জন্য আমাদের বন বাঁচাই। তোমার স্নেহের, স্নেহা।</div>
+  </div>
+</div>
+<!-- ==================== 8 ==================== -->
+<div class="card" id="i8">
+  <div class="card-header">8. Advice to Visit Public Library (Similar)</div>
+  <div class="card-body">
+    <div class="question"><strong>Question:</strong> Write a letter to your friend (within 100 words) advising him/her to visit the public library in his/her locality as frequently as possible.</div>
+    <div class="letter-box">15, Jadavpur
+Kolkata – 700032
+8 September 2026
+My dear Priya,
+I hope you are doing well. I want to give you a valuable suggestion.
+You should visit the public library in your locality as often as possible. A library is a storehouse of knowledge. You will get books on every subject there. Regular reading will improve your English vocabulary and writing power. It will also increase your general knowledge. The peaceful environment of the library helps in better concentration. Many toppers make the library their regular place of study.
+Please start going there at least twice a week. It will bring great benefit in your academic life.
+Yours sincerely,
+Arjun</div>
+    <div class="bengali"><strong>Bengali Meaning:</strong> ১৫, যাদবপুর, কলকাতা – ৭০০০৩২, ৮ সেপ্টেম্বর ২০২৬। প্রিয় প্রিয়া, আশা করি তুমি ভালো আছো। আমি তোমাকে একটি মূল্যবান পরামর্শ দিতে চাই। তোমার এলাকার পাবলিক লাইব্রেরিতে যতবার সম্ভব যাও। লাইব্রেরি জ্ঞানের ভাণ্ডার। সেখানে তুমি প্রতিটি বিষয়ের বই পাবে। নিয়মিত পড়া তোমার ইংরেজি শব্দভাণ্ডার ও লেখার ক্ষমতা বাড়াবে। এটি তোমার সাধারণ জ্ঞানও বাড়াবে। লাইব্রেরির শান্ত পরিবেশ ভালো মনোযোগে সাহায্য করে। অনেক টপার লাইব্রেরিকে তাদের নিয়মিত পড়ার জায়গা করে তোলে। অনুগ্রহ করে সপ্তাহে অন্তত দুবার যাওয়া শুরু করো। এটি তোমার পড়াশোনার জীবনে বড় উপকার আনবে। তোমার বিশ্বস্ত, অর্জুন।</div>
+  </div>
+</div>
+<!-- ==================== 9 ==================== -->
+<div class="card" id="i9">
+  <div class="card-header">9. Plan after Madhyamik Examination</div>
+  <div class="card-body">
+    <div class="question"><strong>Question:</strong> Write a letter (in about 100 words) to your friend telling him/her how you have planned to spend your days after the Madhyamik Examination.</div>
+    <div class="letter-box">67, Park Circus
+Kolkata – 700017
+8 September 2026
+My dear Ritam,
+I hope your preparation for Madhyamik is going well. I want to tell you my plan after the examination.
+After the Madhyamik Examination I shall take rest for one week. Then I shall go to my native village to meet my grandparents. I also plan to learn swimming and join a spoken English class. In the free time I shall read story books and play outdoor games. I want to help my father in his shop for a few hours every day. These activities will make my vacation useful and enjoyable.
+What is your plan? Write to me soon.
+Yours affectionately,
+Kabir</div>
+    <div class="bengali"><strong>Bengali Meaning:</strong> ৬৭, পার্ক সার্কাস, কলকাতা – ৭০০০১৭, ৮ সেপ্টেম্বর ২০২৬। প্রিয় ঋতম, আশা করি তোমার মাধ্যমিকের প্রস্তুতি ভালোভাবে চলছে। পরীক্ষার পর আমার পরিকল্পনা তোমাকে বলতে চাই। মাধ্যমিক পরীক্ষার পর এক সপ্তাহ বিশ্রাম নেব। তারপর ঠাকুরদা-ঠাকুরমাকে দেখতে নিজের গ্রামে যাব। সাঁতার শিখব এবং স্পোকেন ইংলিশ ক্লাসেও ভর্তি হব। ফাঁকা সময়ে গল্পের বই পড়ব এবং বাইরের খেলা খেলব। প্রতিদিন কয়েক ঘণ্টা বাবার দোকানে সাহায্য করতে চাই। এই কাজগুলো আমার ছুটিকে উপকারী ও উপভোগ্য করে তুলবে। তোমার পরিকল্পনা কী? শীঘ্রই চিঠি লিখো। তোমার স্নেহের, কবির।</div>
+  </div>
+</div>
+<!-- ==================== 10 ==================== -->
+<div class="card" id="i10">
+  <div class="card-header">10. Visit to a Place of Interest</div>
+  <div class="card-body">
+    <div class="question"><strong>Question:</strong> Write a letter to your friend in about 100 words telling him/her about your recent visit to a place of interest. You may use the following points. (Time and place-mode of transport-your companions-description of the place.)</div>
+    <div class="letter-box">12/A, Garia Main Road
+Kolkata – 700084
+8 September 2026
+My dear Ankit,
+I hope you are fine. I want to share the joy of my recent visit with you.
+Last Saturday I visited the Victoria Memorial with my parents and sister. We went by metro and auto. The place is very beautiful and clean. The white marble building looks <span class="word">magnificent<span class="tooltip">অসাধারণ</span></span>. Inside there are many historical paintings, statues and documents. The garden around the memorial is full of green grass and colourful flowers. We spent more than three hours there and enjoyed every moment.
+It was a wonderful experience. You must visit this place when you come to Kolkata.
+Yours sincerely,
+Debashis</div>
+    <div class="bengali"><strong>Bengali Meaning:</strong> ১২/এ, গড়িয়া মেইন রোড, কলকাতা – ৭০০০৮৪, ৮ সেপ্টেম্বর ২০২৬। প্রিয় অঙ্কিত, আশা করি তুমি ভালো আছো। আমি আমার সাম্প্রতিক ভ্রমণের আনন্দ তোমার সঙ্গে ভাগ করে নিতে চাই। গত শনিবার আমি বাবা-মা ও বোনের সঙ্গে ভিক্টোরিয়া মেমোরিয়াল ঘুরতে গিয়েছিলাম। আমরা মেট্রো ও অটো করে গিয়েছিলাম। জায়গাটি খুব সুন্দর ও পরিষ্কার। সাদা মার্বেলের ভবনটি অসাধারণ দেখায়। ভিতরে অনেক ঐতিহাসিক চিত্রকর্ম, মূর্তি ও নথি আছে। মেমোরিয়ালের চারপাশের বাগান সবুজ ঘাস ও রঙিন ফুলে ভরা। আমরা সেখানে তিন ঘণ্টার বেশি সময় কাটিয়ে প্রতিটি মুহূর্ত উপভোগ করেছি। এটি একটি চমৎকার অভিজ্ঞতা ছিল। তুমি কলকাতায় এলে অবশ্যই এই জায়গা দেখতে যেয়ো। তোমার বিশ্বস্ত, দেবাশিস।</div>
+  </div>
+</div>
+<!-- ==================== 11 ==================== -->
+<div class="card" id="i11">
+  <div class="card-header">11. Advice against Smartphone Overuse</div>
+  <div class="card-body">
+    <div class="question"><strong>Question:</strong> Write a letter to your friend advising him/her not to waste too much time on smart phone and social media. Ask him or her to spend more time with family, studies and nature.<br>Points: Useful device — bad effects of overuse — harms physical and mental health — causes accidents — affects sleep — reduces concentration</div>
+    <div class="letter-box">25, Lake Town
+Kolkata – 700089
+8 September 2026
+My dear Priya,
+I hope you are well. I am writing this letter with deep concern for you.
+A smartphone is a useful device when used properly. But <span class="word">overuse<span class="tooltip">অতিরিক্ত ব্যবহার</span></span> of smartphone and social media has many bad effects. It harms both physical and mental health. It causes accidents on the road. It affects sleep and reduces concentration on studies. You should spend more time with your family, books and nature. Talk to your parents, play outdoor games and read good books.
+Please control the use of your phone. Your future is more important than temporary entertainment.
+Yours affectionately,
+Ritam</div>
+    <div class="bengali"><strong>Bengali Meaning:</strong> ২৫, লেক টাউন, কলকাতা – ৭০০০৮৯, ৮ সেপ্টেম্বর ২০২৬। প্রিয় প্রিয়া, আশা করি তুমি ভালো আছো। আমি তোমার জন্য গভীর উদ্বেগ নিয়ে এই চিঠি লিখছি। স্মার্টফোন সঠিকভাবে ব্যবহার করলে একটি উপকারী যন্ত্র। কিন্তু স্মার্টফোন ও সোশ্যাল মিডিয়ার অতিরিক্ত ব্যবহারের অনেক খারাপ প্রভাব আছে। এটি শারীরিক ও মানসিক স্বাস্থ্যের ক্ষতি করে। রাস্তায় দুর্ঘটনার কারণ হয়। ঘুমের উপর প্রভাব ফেলে এবং পড়াশোনায় মনোযোগ কমায়। তোমাকে পরিবার, বই ও প্রকৃতির সঙ্গে আরও সময় কাটাতে হবে। বাবা-মার সঙ্গে কথা বলো, বাইরের খেলা খেলো এবং ভালো বই পড়ো। অনুগ্রহ করে ফোনের ব্যবহার নিয়ন্ত্রণ করো। তোমার ভবিষ্যৎ সাময়িক বিনোদনের চেয়ে অনেক বেশি গুরুত্বপূর্ণ। তোমার স্নেহের, ঋতম।</div>
+  </div>
+</div>
+<!-- ==================== 12 ==================== -->
+<div class="card" id="i12">
+  <div class="card-header">12. Necessity of Reading English Newspapers</div>
+  <div class="card-body">
+    <div class="question"><strong>Question:</strong> Write a letter in about 100 words to your friend telling him/her about the necessity and usefulness of reading English newspapers regularly. You should follow the given points.<br>[Newspaper acts as the mirror to the world — very useful for language learning including improvement of vocabulary — general knowledge increases — critical and mature thinking develops — conclusion]</div>
+    <div class="letter-box">45, Lake Gardens
+Kolkata – 700045
+8 September 2026
+My dear Sourav,
+I hope you are fine. Today I want to tell you about a very useful habit.
+Reading English newspapers regularly is necessary for every student. A newspaper acts as the <span class="word">mirror to the world<span class="tooltip">বিশ্বের আয়না</span></span>. It keeps us informed about national and international events. It is very useful for language learning. Our vocabulary and writing skill improve a lot. General knowledge increases day by day. Critical and mature thinking also develops.
+Please start reading one English newspaper every day. It will help you greatly in your studies and future life.
+Yours sincerely,
+Ananya</div>
+    <div class="bengali"><strong>Bengali Meaning:</strong> ৪৫, লেক গার্ডেনস, কলকাতা – ৭০০০৪৫, ৮ সেপ্টেম্বর ২০২৬। প্রিয় সৌরভ, আশা করি তুমি ভালো আছো। আজ আমি একটি খুব উপকারী অভ্যাস সম্পর্কে তোমাকে বলতে চাই। নিয়মিত ইংরেজি সংবাদপত্র পড়া প্রতিটি ছাত্রছাত্রীর জন্য প্রয়োজনীয়। সংবাদপত্র বিশ্বের আয়না হিসেবে কাজ করে। এটি আমাদের জাতীয় ও আন্তর্জাতিক ঘটনা সম্পর্কে অবগত রাখে। ভাষা শেখার জন্য এটি খুব উপকারী। আমাদের শব্দভাণ্ডার ও লেখার দক্ষতা অনেক বাড়ে। সাধারণ জ্ঞান দিনে দিনে বাড়ে। সমালোচনামূলক ও পরিপক্ক চিন্তাও গড়ে ওঠে। অনুগ্রহ করে প্রতিদিন একটি ইংরেজি সংবাদপত্র পড়া শুরু করো। এটি তোমার পড়াশোনা ও ভবিষ্যৎ জীবনে অনেক সাহায্য করবে। তোমার বিশ্বস্ত, অনন্যা।</div>
+  </div>
+</div>
+
+<!-- ==================== NOTICES ==================== -->
+<div class="section-title" id="notices">📢 Notice Writing – All 16 Answers</div>
+<nav class="item-nav" style="position:static; margin-bottom:16px; border-radius:8px;">
+  <a href="#n1">1</a><a href="#n2">2</a><a href="#n3">3</a><a href="#n4">4</a>
+  <a href="#n5">5</a><a href="#n6">6</a><a href="#n7">7</a><a href="#n8">8</a>
+  <a href="#n9">9</a><a href="#n10">10</a><a href="#n11">11</a><a href="#n12">12</a>
+  <a href="#n13">13</a><a href="#n14">14</a><a href="#n15">15</a><a href="#n16">16</a>
+</nav>
+<!-- 1 -->
+<div class="card" id="n1">
+  <div class="card-header">1. Opening of Club Library – Book Donation</div>
+  <div class="card-body">
+    <div class="question"><strong>Question:</strong> Suppose you are the secretary of a club which has decided to open a library. Write a notice (within 100 words) to the members of your club inviting them to actively join this programme by donating books for the library.</div>
+    <div class="notice-box"><strong>NOTICE</strong>
+<strong>Sunshine Cultural Club</strong>
+<strong>Opening of Club Library</strong>
+Date: 8 September 2026
+This is to inform all members that our club has decided to open a library for the benefit of every member.
+A good library is the heart of any cultural organisation. We therefore request every member to donate books of different subjects such as literature, science, history, geography and general knowledge. Both old and new books in good condition will be gratefully accepted. Members may submit the books to the undersigned between 10 a.m. and 5 p.m. on any working day till 20 September 2026. A complete list of donors will be displayed on the notice board.
+Your active participation and generous contribution will make this programme a great success. Let us join hands and build a rich library together for our future generations.
+Sd/-
+Ankit Roy
+Secretary</div>
+    <div class="bengali"><strong>Bengali Meaning:</strong> নোটিশ – সানশাইন কালচারাল ক্লাব – ক্লাব লাইব্রেরি খোলা – তারিখ: ৮ সেপ্টেম্বর ২০২৬। এই মর্মে সকল সদস্যকে জানানো যাচ্ছে যে আমাদের ক্লাব প্রত্যেক সদস্যের সুবিধার জন্য একটি লাইব্রেরি খোলার সিদ্ধান্ত নিয়েছে। একটি ভালো লাইব্রেরি যেকোনো সাংস্কৃতিক সংগঠনের হৃদয়। তাই আমরা প্রতিটি সদস্যকে সাহিত্য, বিজ্ঞান, ইতিহাস, ভূগোল ও সাধারণ জ্ঞানের বিভিন্ন বিষয়ের বই দান করার অনুরোধ করছি। ভালো অবস্থায় পুরনো ও নতুন বই কৃতজ্ঞতার সঙ্গে গ্রহণ করা হবে। সদস্যরা ২০ সেপ্টেম্বর ২০২৬ পর্যন্ত যেকোনো কর্মদিবসে সকাল ১০টা থেকে বিকেল ৫টার মধ্যে নিম্নস্বাক্ষরকারীর কাছে বই জমা দিতে পারেন। দাতাদের সম্পূর্ণ তালিকা নোটিশ বোর্ডে প্রদর্শন করা হবে। আপনাদের সক্রিয় অংশগ্রহণ ও উদার অবদান এই কর্মসূচিকে সাফল্যমণ্ডিত করবে। আসুন আমরা হাত মিলিয়ে ভবিষ্যৎ প্রজন্মের জন্য একটি সমৃদ্ধ লাইব্রেরি গড়ে তুলি। স্বাক্ষরিত/- অঙ্কিত রায়, সচিব।</div>
+  </div>
+</div>
+<!-- 2 -->
+<div class="card" id="n2">
+  <div class="card-header">2. Nature Walk at Jaldapara</div>
+  <div class="card-body">
+    <div class="question"><strong>Question:</strong> Suppose you are the school prefect. The school authority has decided to organise a day-long Nature Walk at Jaldapara with students of class 10. As the prefect, write a notice announcing this decision for information of the concerned students. Use the following points... (Date—time of start and return—mode of conveyance—when to turn up at school campus—due date for enrolling names—any other relevant information.)</div>
+    <div class="notice-box"><strong>NOTICE</strong>
+<strong>ABC High School</strong>
+<strong>Nature Walk at Jaldapara</strong>
+Date: 8 September 2026
+This is to inform all students of Class X that the school authority has decided to organise a day-long Nature Walk at Jaldapara.
+The programme will be held on 20 September 2026. Students must reach the school campus by 6:00 a.m. The school bus will leave at 6:30 a.m. and return by 7:00 p.m. The mode of conveyance will be the school bus. Names must be enrolled with the undersigned on or before 15 September 2026. Students should bring water bottles, light tiffin and wear comfortable clothes and shoes. No student will be allowed without a written consent letter from parents.
+All Class X students are earnestly requested to participate actively and enjoy the beauty of nature.
+Sd/-
+Priya Banerjee
+School Prefect</div>
+    <div class="bengali"><strong>Bengali Meaning:</strong> নোটিশ – এবিসি হাই স্কুল – জালদাপাড়ায় প্রকৃতি ভ্রমণ – তারিখ: ৮ সেপ্টেম্বর ২০২৬। এই মর্মে দশম শ্রেণির সকল ছাত্রছাত্রীকে জানানো যাচ্ছে যে স্কুল কর্তৃপক্ষ জালদাপাড়ায় একদিনের প্রকৃতি ভ্রমণের আয়োজন করার সিদ্ধান্ত নিয়েছে। কর্মসূচিটি ২০ সেপ্টেম্বর ২০২৬-এ অনুষ্ঠিত হবে। ছাত্রছাত্রীদের সকাল ৬টায় স্কুল ক্যাম্পাসে পৌঁছাতে হবে। স্কুল বাস ৬:৩০-এ ছাড়বে এবং সন্ধ্যা ৭টার মধ্যে ফিরবে। যাতায়াতের মাধ্যম হবে স্কুল বাস। ১৫ সেপ্টেম্বর ২০২৬-এর মধ্যে নিম্নস্বাক্ষরকারীর কাছে নাম নথিভুক্ত করতে হবে। ছাত্রছাত্রীদের জলের বোতল, হালকা টিফিন আনতে হবে এবং আরামদায়ক পোশাক ও জুতো পরতে হবে। অভিভাবকের লিখিত সম্মতিপত্র ছাড়া কোনো ছাত্রছাত্রীকে অনুমতি দেওয়া হবে না। দশম শ্রেণির সকল ছাত্রছাত্রীকে সক্রিয়ভাবে অংশগ্রহণ করে প্রকৃতির সৌন্দর্য উপভোগ করার জন্য আন্তরিক অনুরোধ করা হচ্ছে। স্বাক্ষরিত/- প্রিয়া ব্যানার্জি, স্কুল প্রিফেক্ট।</div>
+  </div>
+</div>
+<!-- 3 -->
+<div class="card" id="n3">
+  <div class="card-header">3. Blood Donation Camp</div>
+  <div class="card-body">
+    <div class="question"><strong>Question:</strong> As the secretary of your local club write a notice (in about 100 words) about a Blood Donation Camp that your club has organised. You may use the following points. [Date, time and venue of the camp – persons who are fit to donate blood – the doctors who would attend – the social purpose.]</div>
+    <div class="notice-box"><strong>NOTICE</strong>
+<strong>Green Valley Club</strong>
+<strong>Blood Donation Camp</strong>
+Date: 8 September 2026
+This is to inform all members and local people that our club is going to organise a Blood Donation Camp for a noble social cause.
+The camp will be held on 18 September 2026 from 9:00 a.m. to 3:00 p.m. at the club hall. Healthy persons between 18 and 60 years of age and weighing above 50 kg can donate blood. Experienced doctors from the local hospital will attend the camp and conduct necessary medical tests. The main purpose of this camp is to collect blood for needy patients and serve the society in times of emergency.
+All are earnestly requested to come forward and donate blood. Your small contribution can save a precious life.
+Sd/-
+Rahul Chatterjee
+Secretary</div>
+    <div class="bengali"><strong>Bengali Meaning:</strong> নোটিশ – গ্রিন ভ্যালি ক্লাব – রক্তদান শিবির – তারিখ: ৮ সেপ্টেম্বর ২০২৬। এই মর্মে সকল সদস্য ও স্থানীয় মানুষকে জানানো যাচ্ছে যে আমাদের ক্লাব একটি মহৎ সামাজিক উদ্দেশ্যে রক্তদান শিবির আয়োজন করতে চলেছে। শিবিরটি ১৮ সেপ্টেম্বর ২০২৬ তারিখে সকাল ৯টা থেকে বিকেল ৩টা পর্যন্ত ক্লাব হলে অনুষ্ঠিত হবে। ১৮ থেকে ৬০ বছর বয়সী এবং ৫০ কেজির উপরে ওজনের সুস্থ ব্যক্তিরা রক্তদান করতে পারবেন। স্থানীয় হাসপাতালের অভিজ্ঞ চিকিৎসকরা শিবিরে উপস্থিত থেকে প্রয়োজনীয় চিকিৎসা পরীক্ষা করবেন। এই শিবিরের মূল উদ্দেশ্য হলো অসহায় রোগীদের জন্য রক্ত সংগ্রহ করা এবং জরুরি সময়ে সমাজের সেবা করা। সকলকে এগিয়ে এসে রক্তদান করার জন্য আন্তরিক অনুরোধ করা হচ্ছে। আপনার ছোট অবদান একটি মূল্যবান জীবন বাঁচাতে পারে। স্বাক্ষরিত/- রাহুল চ্যাটার্জি, সচিব।</div>
+  </div>
+</div>
+<!-- 4 -->
+<div class="card" id="n4">
+  <div class="card-header">4. Garbage Cleaning Operation</div>
+  <div class="card-body">
+    <div class="question"><strong>Question:</strong> As the Secretary of your school Students’ Association write a notice in about 100 words requesting the students of your school to participate actively in the garbage cleaning operation in your school. You may use the following points. [date & time — things they should bring from home — areas to be cleaned — duration of the operation — general appeal]</div>
+    <div class="notice-box"><strong>NOTICE</strong>
+<strong>ABC High School</strong>
+<strong>Students’ Association</strong>
+<strong>Garbage Cleaning Operation</strong>
+Date: 8 September 2026
+This is to inform all students that a special garbage cleaning operation will be held in our school to keep the campus clean and healthy.
+The programme will take place on 16 September 2026 from 8:00 a.m. to 11:00 a.m. Students should bring brooms, buckets, gloves and masks from home. The school ground, classrooms, corridors and the garden area will be thoroughly cleaned. The operation will continue for three hours under the guidance of teachers.
+All students are earnestly requested to participate actively. A clean school is the sign of a disciplined student community. Let us work together to make our campus beautiful.
+Sd/-
+Suman Ghosh
+Secretary, Students’ Association</div>
+    <div class="bengali"><strong>Bengali Meaning:</strong> নোটিশ – এবিসি হাই স্কুল – ছাত্র সমিতি – আবর্জনা পরিষ্কার অভিযান – তারিখ: ৮ সেপ্টেম্বর ২০২৬। এই মর্মে সকল ছাত্রছাত্রীকে জানানো যাচ্ছে যে আমাদের স্কুল ক্যাম্পাস পরিষ্কার ও স্বাস্থ্যকর রাখার জন্য একটি বিশেষ আবর্জনা পরিষ্কার অভিযান অনুষ্ঠিত হবে। কর্মসূচিটি ১৬ সেপ্টেম্বর ২০২৬ তারিখে সকাল ৮টা থেকে ১১টা পর্যন্ত চলবে। ছাত্রছাত্রীদের বাড়ি থেকে ঝাড়ু, বালতি, গ্লাভস ও মাস্ক আনতে হবে। স্কুল মাঠ, শ্রেণিকক্ষ, করিডোর ও বাগান এলাকা ভালোভাবে পরিষ্কার করা হবে। শিক্ষকদের তত্ত্বাবধানে অভিযানটি তিন ঘণ্টা ধরে চলবে। সকল ছাত্রছাত্রীকে সক্রিয়ভাবে অংশগ্রহণ করার জন্য আন্তরিক অনুরোধ করা হচ্ছে। একটি পরিচ্ছন্ন স্কুল হলো শৃঙ্খলাবদ্ধ ছাত্র সমাজের পরিচয়। আসুন আমরা একসঙ্গে কাজ করে আমাদের ক্যাম্পাসকে সুন্দর করে তুলি। স্বাক্ষরিত/- সুমন ঘোষ, সচিব, ছাত্র সমিতি।</div>
+  </div>
+</div>
+<!-- 5 -->
+<div class="card" id="n5">
+  <div class="card-header">5. Tree Plantation Programme</div>
+  <div class="card-body">
+    <div class="question"><strong>Question:</strong> As the Secretary of the Eco-Club of your school, write a notice requesting the students to attend the ‘Tree Plantation Programme’ of your school. Get the notice countersigned by the Headmistress of your school.</div>
+    <div class="notice-box"><strong>NOTICE</strong>
+<strong>ABC High School</strong>
+<strong>Eco-Club</strong>
+<strong>Tree Plantation Programme</strong>
+Date: 8 September 2026
+This is to inform all students that the Eco-Club of our school is going to organise a Tree Plantation Programme for a greener campus.
+The programme will be held on 22 September 2026 at 9:00 a.m. in the school garden. All students are requested to attend the programme and take part in planting saplings. The school will provide the saplings. Students should bring their own water bottles and wear comfortable clothes. Tree plantation helps us fight pollution and keep the environment clean.
+Your active participation will help us make our campus greener and protect nature for future generations.
+Sd/-
+Ananya Sen
+Secretary, Eco-Club
+Countersigned by
+Sd/-
+Headmistress</div>
+    <div class="bengali"><strong>Bengali Meaning:</strong> নোটিশ – এবিসি হাই স্কুল – ইকো-ক্লাব – বৃক্ষরোপণ কর্মসূচি – তারিখ: ৮ সেপ্টেম্বর ২০২৬। এই মর্মে সকল ছাত্রছাত্রীকে জানানো যাচ্ছে যে আমাদের স্কুলের ইকো-ক্লাব একটি সবুজ ক্যাম্পাসের জন্য বৃক্ষরোপণ কর্মসূচির আয়োজন করতে চলেছে। কর্মসূচিটি ২২ সেপ্টেম্বর ২০২৬ তারিখে সকাল ৯টায় স্কুল বাগানে অনুষ্ঠিত হবে। সকল ছাত্রছাত্রীকে কর্মসূচিতে উপস্থিত থেকে চারা রোপণে অংশগ্রহণ করার অনুরোধ করা হচ্ছে। স্কুল চারা সরবরাহ করবে। ছাত্রছাত্রীদের নিজেদের জলের বোতল আনতে হবে এবং আরামদায়ক পোশাক পরতে হবে। বৃক্ষরোপণ আমাদের দূষণের বিরুদ্ধে লড়াই করতে এবং পরিবেশ পরিচ্ছন্ন রাখতে সাহায্য করে। আপনাদের সক্রিয় অংশগ্রহণ আমাদের ক্যাম্পাসকে সবুজ করে তুলতে এবং ভবিষ্যৎ প্রজন্মের জন্য প্রকৃতি রক্ষায় সাহায্য করবে। স্বাক্ষরিত/- অনন্যা সেন, সচিব, ইকো-ক্লাব। প্রতিস্বাক্ষরিত স্বাক্ষরিত/- প্রধান শিক্ষিকা।</div>
+  </div>
+</div>
+<!-- 6 -->
+<div class="card" id="n6">
+  <div class="card-header">6. Fund for Flood Victims</div>
+  <div class="card-body">
+    <div class="question"><strong>Question:</strong> Suppose you are the secretary of the students welfare club of your school. Draft a notice for the students asking the students to raise a fund to help the flood affected people of Midnapur and Howrah districts. [Funds of relief work-mention bank Name, Account Number, IFSC Code- appeal to the people to stand by the flood victim]</div>
+    <div class="notice-box"><strong>NOTICE</strong>
+<strong>ABC High School</strong>
+<strong>Students’ Welfare Club</strong>
+<strong>Fund for Flood Victims</strong>
+Date: 8 September 2026
+This is to inform all students that our club has decided to raise a fund to help the flood-affected people of Midnapur and Howrah districts.
+Many families have lost their homes and belongings in the recent floods. Students may deposit their contribution in the following bank account:
+Bank Name: State Bank of India
+Account Number: 12345678901
+IFSC Code: SBIN0001234
+A small contribution from each student can bring great relief to the victims. All students are earnestly requested to stand by the flood victims and contribute generously according to their capacity.
+Sd/-
+Amit Roy
+Secretary, Students’ Welfare Club</div>
+    <div class="bengali"><strong>Bengali Meaning:</strong> নোটিশ – এবিসি হাই স্কুল – ছাত্র কল্যাণ ক্লাব – বন্যা দুর্গতদের জন্য তহবিল – তারিখ: ৮ সেপ্টেম্বর ২০২৬। এই মর্মে সকল ছাত্রছাত্রীকে জানানো যাচ্ছে যে আমাদের ক্লাব মেদিনীপুর ও হাওড়া জেলার বন্যা দুর্গত মানুষদের সাহায্যের জন্য তহবিল সংগ্রহের সিদ্ধান্ত নিয়েছে। সাম্প্রতিক বন্যায় অনেক পরিবার তাদের বাড়িঘর ও সম্পত্তি হারিয়েছে। ছাত্রছাত্রীরা নিম্নলিখিত ব্যাঙ্ক অ্যাকাউন্টে তাদের অনুদান জমা দিতে পারেন: ব্যাঙ্কের নাম: স্টেট ব্যাঙ্ক অফ ইন্ডিয়া, অ্যাকাউন্ট নম্বর: ১২৩৪৫৬৭৮৯০১, আইএফএসসি কোড: SBIN0001234। প্রতিটি ছাত্রছাত্রীর ছোট অবদান দুর্গতদের বড় স্বস্তি আনতে পারে। সকল ছাত্রছাত্রীকে বন্যা দুর্গতদের পাশে দাঁড়াতে এবং সাধ্যমতো উদারভাবে অনুদান দেওয়ার জন্য আন্তরিক অনুরোধ করা হচ্ছে। স্বাক্ষরিত/- অমিত রায়, সচিব, ছাত্র কল্যাণ ক্লাব।</div>
+  </div>
+</div>
+<!-- 7 -->
+<div class="card" id="n7">
+  <div class="card-header">7. Ban on Mobile Phones</div>
+  <div class="card-body">
+    <div class="question"><strong>Question:</strong> Suppose you are the secretary of students’ committee. Write a notice for the students, requesting them not to bring mobile phones in school or else necessary steps will be taken. [Hints: Unhealthy tendency growing among students - distracting others - hampering classroom teaching - strict actions may be taken if found guilty]</div>
+    <div class="notice-box"><strong>NOTICE</strong>
+<strong>ABC High School</strong>
+<strong>Students’ Committee</strong>
+<strong>Ban on Mobile Phones</strong>
+Date: 8 September 2026
+This is to inform all students that an unhealthy tendency of bringing mobile phones to school is growing among some students.
+Mobile phones distract other students and seriously hamper classroom teaching. They also reduce concentration and waste valuable study time. Therefore, no student is allowed to bring mobile phones to school from now onwards. If any student is found guilty of violating this rule, strict disciplinary action will be taken against him or her.
+All students are requested to follow this rule strictly for the smooth running of the school and for their own academic progress.
+Sd/-
+Sourav Mondal
+Secretary, Students’ Committee</div>
+    <div class="bengali"><strong>Bengali Meaning:</strong> নোটিশ – এবিসি হাই স্কুল – ছাত্র কমিটি – মোবাইল ফোন নিষিদ্ধ – তারিখ: ৮ সেপ্টেম্বর ২০২৬। এই মর্মে সকল ছাত্রছাত্রীকে জানানো যাচ্ছে যে কিছু ছাত্রছাত্রীর মধ্যে স্কুলে মোবাইল ফোন আনার একটি অস্বাস্থ্যকর প্রবণতা বাড়ছে। মোবাইল ফোন অন্য ছাত্রছাত্রীদের বিভ্রান্ত করে এবং শ্রেণিকক্ষের শিক্ষাদানে মারাত্মকভাবে বাধা সৃষ্টি করে। এগুলো মনোযোগও কমায় এবং মূল্যবান পড়ার সময় নষ্ট করে। তাই এখন থেকে কোনো ছাত্রছাত্রীকে স্কুলে মোবাইল ফোন আনতে দেওয়া হবে না। যদি কোনো ছাত্রছাত্রী এই নিয়ম লঙ্ঘনের দায়ে দোষী সাব্যস্ত হয়, তার বিরুদ্ধে কঠোর শাস্তিমূলক ব্যবস্থা নেওয়া হবে। স্কুলের সুষ্ঠু পরিচালনা এবং নিজেদের পড়াশোনার উন্নতির জন্য সকল ছাত্রছাত্রীকে এই নিয়ম কঠোরভাবে মেনে চলার অনুরোধ করা হচ্ছে। স্বাক্ষরিত/- সৌরভ মণ্ডল, সচিব, ছাত্র কমিটি।</div>
+  </div>
+</div>
+<!-- 8 -->
+<div class="card" id="n8">
+  <div class="card-header">8. Exhibition “Save Earth-Save Life”</div>
+  <div class="card-body">
+    <div class="question"><strong>Question:</strong> Suppose you are the Secretary of your school Eco-club. Your school is going to organize an exhibition on environmental preservation. The topic is “Save Earth-Save Life”. Now write a Notice informing the students about it and inviting the names of willing students to participate in the programme.</div>
+    <div class="notice-box"><strong>NOTICE</strong>
+<strong>ABC High School</strong>
+<strong>Eco-Club</strong>
+<strong>Exhibition on “Save Earth-Save Life”</strong>
+Date: 8 September 2026
+This is to inform all students that our Eco-Club is going to organise an exhibition on environmental preservation.
+The topic of the exhibition is “Save Earth-Save Life”. It will be held on 25 September 2026 in the school hall from 10:00 a.m. to 3:00 p.m. Willing students may submit their names to the undersigned on or before 18 September 2026. Students can display posters, models and projects related to the topic.
+All students are requested to participate actively and help us create awareness about saving our precious earth for future generations.
+Sd/-
+Meera Debnath
+Secretary, Eco-Club</div>
+    <div class="bengali"><strong>Bengali Meaning:</strong> নোটিশ – এবিসি হাই স্কুল – ইকো-ক্লাব – “পৃথিবী বাঁচাও-জীবন বাঁচাও” প্রদর্শনী – তারিখ: ৮ সেপ্টেম্বর ২০২৬। এই মর্মে সকল ছাত্রছাত্রীকে জানানো যাচ্ছে যে আমাদের ইকো-ক্লাব পরিবেশ সংরক্ষণের উপর একটি প্রদর্শনীর আয়োজন করতে চলেছে। প্রদর্শনীর বিষয় “পৃথিবী বাঁচাও-জীবন বাঁচাও”। এটি ২৫ সেপ্টেম্বর ২০২৬ তারিখে সকাল ১০টা থেকে বিকেল ৩টা পর্যন্ত স্কুল হলে অনুষ্ঠিত হবে। ইচ্ছুক ছাত্রছাত্রীরা ১৮ সেপ্টেম্বর ২০২৬-এর মধ্যে নিম্নস্বাক্ষরকারীর কাছে নাম জমা দিতে পারেন। ছাত্রছাত্রীরা বিষয় সম্পর্কিত পোস্টার, মডেল ও প্রজেক্ট প্রদর্শন করতে পারবে। সকল ছাত্রছাত্রীকে সক্রিয়ভাবে অংশগ্রহণ করে ভবিষ্যৎ প্রজন্মের জন্য আমাদের মূল্যবান পৃথিবী রক্ষার বিষয়ে সচেতনতা তৈরি করতে সাহায্য করার অনুরোধ করা হচ্ছে। স্বাক্ষরিত/- মীরা দেবনাথ, সচিব, ইকো-ক্লাব।</div>
+  </div>
+</div>
+<!-- 9 -->
+<div class="card" id="n9">
+  <div class="card-header">9. Career Counselling Programme</div>
+  <div class="card-body">
+    <div class="question"><strong>Question:</strong> Suppose you are the students’ secretary of your school. Your school has decided to organise a career counselling for the students of class IX and X. Now write a notice inviting the students of class IX and X to enlist their names and participate in it. Mention date, place, time, fees and other details which are necessary.</div>
+    <div class="notice-box"><strong>NOTICE</strong>
+<strong>ABC High School</strong>
+<strong>Career Counselling Programme</strong>
+Date: 8 September 2026
+This is to inform the students of Class IX and X that the school is going to organise a Career Counselling Programme for their bright future.
+The programme will be held on 19 September 2026 from 11:00 a.m. to 2:00 p.m. in the school auditorium. There is no fee for participation. Experienced counsellors will guide the students about different career options. Students must enlist their names with the undersigned on or before 15 September 2026.
+All Class IX and X students are earnestly requested to participate and take proper guidance for their future career.
+Sd/-
+Kabir Hossain
+Students’ Secretary</div>
+    <div class="bengali"><strong>Bengali Meaning:</strong> নোটিশ – এবিসি হাই স্কুল – ক্যারিয়ার কাউন্সেলিং কর্মসূচি – তারিখ: ৮ সেপ্টেম্বর ২০২৬। এই মর্মে নবম ও দশম শ্রেণির ছাত্রছাত্রীদের জানানো যাচ্ছে যে স্কুল তাদের উজ্জ্বল ভবিষ্যতের জন্য একটি ক্যারিয়ার কাউন্সেলিং কর্মসূচির আয়োজন করতে চলেছে। কর্মসূচিটি ১৯ সেপ্টেম্বর ২০২৬ তারিখে সকাল ১১টা থেকে দুপুর ২টা পর্যন্ত স্কুল অডিটোরিয়ামে অনুষ্ঠিত হবে। অংশগ্রহণের জন্য কোনো ফি নেই। অভিজ্ঞ কাউন্সেলররা ছাত্রছাত্রীদের বিভিন্ন ক্যারিয়ার বিকল্প সম্পর্কে নির্দেশনা দেবেন। ছাত্রছাত্রীদের ১৫ সেপ্টেম্বর ২০২৬-এর মধ্যে নিম্নস্বাক্ষরকারীর কাছে নাম নথিভুক্ত করতে হবে। নবম ও দশম শ্রেণির সকল ছাত্রছাত্রীকে অংশগ্রহণ করে তাদের ভবিষ্যৎ ক্যারিয়ারের জন্য সঠিক নির্দেশনা নেওয়ার জন্য আন্তরিক অনুরোধ করা হচ্ছে। স্বাক্ষরিত/- কবির হোসেন, ছাত্র সচিব।</div>
+  </div>
+</div>
+<!-- 10 -->
+<div class="card" id="n10">
+  <div class="card-header">10. Sit and Draw Competition</div>
+  <div class="card-body">
+    <div class="question"><strong>Question:</strong> Suppose you are the Secretary of your school Eco-club. Your school wants to organise a ‘sit and draw competition’ on the occasion of a tree plantation programme. Write a notice informing the students about it. Get your notice counter signed by the head master.</div>
+    <div class="notice-box"><strong>NOTICE</strong>
+<strong>ABC High School</strong>
+<strong>Eco-Club</strong>
+<strong>Sit and Draw Competition</strong>
+Date: 8 September 2026
+This is to inform all students that a Sit and Draw Competition will be held on the occasion of our Tree Plantation Programme.
+The competition will take place on 22 September 2026 at 10:00 a.m. in the school hall. Students from Class V to X may participate. Drawing sheets will be provided by the school. Students should bring their own colours, pencils and erasers. Attractive prizes will be given to the winners.
+All interested students are requested to participate actively and make the programme a grand success.
+Sd/-
+Ritam Saha
+Secretary, Eco-Club
+Countersigned by
+Sd/-
+Headmaster</div>
+    <div class="bengali"><strong>Bengali Meaning:</strong> নোটিশ – এবিসি হাই স্কুল – ইকো-ক্লাব – সিট অ্যান্ড ড্র কম্পিটিশন – তারিখ: ৮ সেপ্টেম্বর ২০২৬। এই মর্মে সকল ছাত্রছাত্রীকে জানানো যাচ্ছে যে আমাদের বৃক্ষরোপণ কর্মসূচির উপলক্ষে একটি সিট অ্যান্ড ড্র প্রতিযোগিতা অনুষ্ঠিত হবে। প্রতিযোগিতাটি ২২ সেপ্টেম্বর ২০২৬ তারিখে সকাল ১০টায় স্কুল হলে অনুষ্ঠিত হবে। পঞ্চম থেকে দশম শ্রেণির ছাত্রছাত্রীরা অংশগ্রহণ করতে পারবে। স্কুল ড্রয়িং শিট সরবরাহ করবে। ছাত্রছাত্রীদের নিজেদের রং, পেনসিল ও ইরেজার আনতে হবে। বিজয়ীদের আকর্ষণীয় পুরস্কার দেওয়া হবে। সকল আগ্রহী ছাত্রছাত্রীকে সক্রিয়ভাবে অংশগ্রহণ করে কর্মসূচিকে সাফল্যমণ্ডিত করার অনুরোধ করা হচ্ছে। স্বাক্ষরিত/- ঋতম সাহা, সচিব, ইকো-ক্লাব। প্রতিস্বাক্ষরিত স্বাক্ষরিত/- প্রধান শিক্ষক।</div>
+  </div>
+</div>
+<!-- 11 -->
+<div class="card" id="n11">
+  <div class="card-header">11. Science Fair</div>
+  <div class="card-body">
+    <div class="question"><strong>Question:</strong> Suppose you are the captain of your school. Your school is organising a Science Fair for the students from class IX to XII. Write a notice (within 100 words) informing the students about this programme.</div>
+    <div class="notice-box"><strong>NOTICE</strong>
+<strong>ABC High School</strong>
+<strong>Science Fair</strong>
+Date: 8 September 2026
+This is to inform all students of Class IX to XII that our school is organising a Science Fair to encourage scientific thinking.
+The fair will be held on 28 September 2026 from 10:00 a.m. to 4:00 p.m. in the school premises. Students may display models, projects and interesting experiments. Interested students should submit their names and project titles to the undersigned by 20 September 2026. Attractive prizes will be awarded to the best projects.
+All students are requested to participate actively and make the Science Fair a grand success.
+Sd/-
+Arjun Das
+School Captain</div>
+    <div class="bengali"><strong>Bengali Meaning:</strong> নোটিশ – এবিসি হাই স্কুল – বিজ্ঞান মেলা – তারিখ: ৮ সেপ্টেম্বর ২০২৬। এই মর্মে নবম থেকে দ্বাদশ শ্রেণির সকল ছাত্রছাত্রীকে জানানো যাচ্ছে যে আমাদের স্কুল বৈজ্ঞানিক চিন্তাভাবনাকে উৎসাহিত করার জন্য একটি বিজ্ঞান মেলার আয়োজন করছে। মেলাটি ২৮ সেপ্টেম্বর ২০২৬ তারিখে সকাল ১০টা থেকে বিকেল ৪টা পর্যন্ত স্কুল প্রাঙ্গণে অনুষ্ঠিত হবে। ছাত্রছাত্রীরা মডেল, প্রজেক্ট ও আকর্ষণীয় পরীক্ষা প্রদর্শন করতে পারবে। আগ্রহী ছাত্রছাত্রীদের ২০ সেপ্টেম্বর ২০২৬-এর মধ্যে নিম্নস্বাক্ষরকারীর কাছে নাম ও প্রজেক্টের শিরোনাম জমা দিতে হবে। সেরা প্রজেক্টগুলিকে আকর্ষণীয় পুরস্কার দেওয়া হবে। সকল ছাত্রছাত্রীকে সক্রিয়ভাবে অংশগ্রহণ করে বিজ্ঞান মেলাকে সাফল্যমণ্ডিত করার অনুরোধ করা হচ্ছে। স্বাক্ষরিত/- অর্জুন দাস, স্কুল ক্যাপ্টেন।</div>
+  </div>
+</div>
+<!-- 12 -->
+<div class="card" id="n12">
+  <div class="card-header">12. Educational Excursion</div>
+  <div class="card-body">
+    <div class="question"><strong>Question:</strong> Suppose you are the Captain of your school, write a notice for all students of your school asking them to participate in an educational excursion. [Points: Date – time – place – things to be taken – consent letter – charges]</div>
+    <div class="notice-box"><strong>NOTICE</strong>
+<strong>ABC High School</strong>
+<strong>Educational Excursion</strong>
+Date: 8 September 2026
+This is to inform all students that an educational excursion has been arranged by the school for better learning.
+The excursion will be held on 30 September 2026. Students must reach school by 6:30 a.m. The place of visit is the Indian Museum. Students should bring water bottles, light tiffin and a notebook. Written consent of parents is compulsory. The charge is Rs. 150 per student. The amount must be deposited by 25 September 2026.
+All students are requested to participate actively and make the educational excursion a memorable one.
+Sd/-
+Debashis Dutta
+School Captain</div>
+    <div class="bengali"><strong>Bengali Meaning:</strong> নোটিশ – এবিসি হাই স্কুল – শিক্ষামূলক ভ্রমণ – তারিখ: ৮ সেপ্টেম্বর ২০২৬। এই মর্মে সকল ছাত্রছাত্রীকে জানানো যাচ্ছে যে ভালো শেখার জন্য স্কুল একটি শিক্ষামূলক ভ্রমণের আয়োজন করেছে। ভ্রমণটি ৩০ সেপ্টেম্বর ২০২৬ তারিখে অনুষ্ঠিত হবে। ছাত্রছাত্রীদের সকাল ৬:৩০-এ স্কুলে পৌঁছাতে হবে। ভ্রমণের স্থান ইন্ডিয়ান মিউজিয়াম। ছাত্রছাত্রীদের জলের বোতল, হালকা টিফিন ও একটি খাতা আনতে হবে। অভিভাবকের লিখিত সম্মতি বাধ্যতামূলক। খরচ প্রতি ছাত্রছাত্রী ১৫০ টাকা। টাকা ২৫ সেপ্টেম্বর ২০২৬-এর মধ্যে জমা দিতে হবে। সকল ছাত্রছাত্রীকে সক্রিয়ভাবে অংশগ্রহণ করে শিক্ষামূলক ভ্রমণকে স্মরণীয় করে তোলার অনুরোধ করা হচ্ছে। স্বাক্ষরিত/- দেবাশিস দত্ত, স্কুল ক্যাপ্টেন।</div>
+  </div>
+</div>
+<!-- 13 -->
+<div class="card" id="n13">
+  <div class="card-header">13. Relief Fund for Flood Victims</div>
+  <div class="card-body">
+    <div class="question"><strong>Question:</strong> Your school is going to arrange a relief fund for the flood-stricken people of north Bengal. the Secretary of the Student Council, write a notice (in about 100 words) making an appeal to the students of your school to contribute money and other essential items for the flood victims.</div>
+    <div class="notice-box"><strong>NOTICE</strong>
+<strong>ABC High School</strong>
+<strong>Student Council</strong>
+<strong>Relief Fund for Flood Victims</strong>
+Date: 8 September 2026
+This is to inform all students that our school is arranging a relief fund for the flood-stricken people of North Bengal.
+Many people have lost their homes and are suffering without food and clothes. Students are requested to contribute money, clothes, dry food, medicines and other essential items. Contributions may be submitted to the undersigned between 10 a.m. and 2 p.m. till 18 September 2026.
+All students are earnestly appealed to come forward and help the flood victims in this hour of need. A small help from us can bring hope to many families.
+Sd/-
+Sneha Mukherjee
+Secretary, Student Council</div>
+    <div class="bengali"><strong>Bengali Meaning:</strong> নোটিশ – এবিসি হাই স্কুল – ছাত্র পরিষদ – বন্যা দুর্গতদের জন্য ত্রাণ তহবিল – তারিখ: ৮ সেপ্টেম্বর ২০২৬। এই মর্মে সকল ছাত্রছাত্রীকে জানানো যাচ্ছে যে আমাদের স্কুল উত্তরবঙ্গের বন্যা দুর্গত মানুষদের জন্য ত্রাণ তহবিলের আয়োজন করছে। অনেক মানুষ তাদের বাড়ি হারিয়েছে এবং খাবার ও কাপড় ছাড়া কষ্ট পাচ্ছে। ছাত্রছাত্রীদের টাকা, কাপড়, শুকনো খাবার, ওষুধ ও অন্যান্য প্রয়োজনীয় জিনিস দান করার অনুরোধ করা হচ্ছে। অনুদান ১৮ সেপ্টেম্বর ২০২৬ পর্যন্ত সকাল ১০টা থেকে দুপুর ২টার মধ্যে নিম্নস্বাক্ষরকারীর কাছে জমা দেওয়া যেতে পারে। সকল ছাত্রছাত্রীকে এই দুঃসময়ে এগিয়ে এসে বন্যা দুর্গতদের সাহায্য করার জন্য আন্তরিক আবেদন জানানো হচ্ছে। আমাদের ছোট সাহায্য অনেক পরিবারের কাছে আশা নিয়ে আসতে পারে। স্বাক্ষরিত/- স্নেহা মুখার্জি, সচিব, ছাত্র পরিষদ।</div>
+  </div>
+</div>
+<!-- 14 -->
+<div class="card" id="n14">
+  <div class="card-header">14. Road Safety Week</div>
+  <div class="card-body">
+    <div class="question"><strong>Question:</strong> Suppose you are the captain of your school. Write a notice (in about 100 words) for the students of your school requesting them to participate in a programme entitled ‘Road Safety Week’. You may use the following points:- [Points: Reasons for organising such a programme a grand success.] date, time and venue placards and banners to be used appeal to make the programme a grand success.]</div>
+    <div class="notice-box"><strong>NOTICE</strong>
+<strong>ABC High School</strong>
+<strong>Road Safety Week</strong>
+Date: 8 September 2026
+This is to inform all students that our school is organising a programme entitled ‘Road Safety Week’ to create awareness.
+The programme will be held on 12 September 2026 from 9:00 a.m. in the school ground. The main purpose is to make students aware of road safety rules and reduce accidents. Students should prepare placards and banners with important safety slogans. A short procession will also be taken out.
+All students are earnestly requested to participate actively and make the programme a grand success. Safety on the road can save many precious lives.
+Sd/-
+Priya Sharma
+School Captain</div>
+    <div class="bengali"><strong>Bengali Meaning:</strong> নোটিশ – এবিসি হাই স্কুল – রোড সেফটি উইক – তারিখ: ৮ সেপ্টেম্বর ২০২৬। এই মর্মে সকল ছাত্রছাত্রীকে জানানো যাচ্ছে যে আমাদের স্কুল সচেতনতা তৈরির জন্য ‘রোড সেফটি উইক’ নামে একটি কর্মসূচির আয়োজন করছে। কর্মসূচিটি ১২ সেপ্টেম্বর ২০২৬ তারিখে সকাল ৯টায় স্কুল মাঠে অনুষ্ঠিত হবে। মূল উদ্দেশ্য হলো ছাত্রছাত্রীদের সড়ক নিরাপত্তা নিয়ম সম্পর্কে সচেতন করা এবং দুর্ঘটনা কমানো। ছাত্রছাত্রীদের গুরুত্বপূর্ণ নিরাপত্তা স্লোগানসহ প্ল্যাকার্ড ও ব্যানার তৈরি করতে হবে। একটি সংক্ষিপ্ত শোভাযাত্রাও বের করা হবে। সকল ছাত্রছাত্রীকে সক্রিয়ভাবে অংশগ্রহণ করে কর্মসূচিকে সাফল্যমণ্ডিত করার জন্য আন্তরিক অনুরোধ করা হচ্ছে। রাস্তায় নিরাপত্তা অনেক মূল্যবান জীবন বাঁচাতে পারে। স্বাক্ষরিত/- প্রিয়া শর্মা, স্কুল ক্যাপ্টেন।</div>
+  </div>
+</div>
+<!-- 15 -->
+<div class="card" id="n15">
+  <div class="card-header">15. Help for Flood & Landslide Victims</div>
+  <div class="card-body">
+    <div class="question"><strong>Question:</strong> Several districts of North Bengal have been severely affected by floods and landslides. Your school has decided to stand by the victims. As the secretary of the Students’ Welfare Committee write a notice urging the students to donate cash or relief materials. [Hints: Affected areas — required items — submission place and time — last date — contact person]</div>
+    <div class="notice-box"><strong>NOTICE</strong>
+<strong>ABC High School</strong>
+<strong>Students’ Welfare Committee</strong>
+<strong>Help for Flood and Landslide Victims</strong>
+Date: 8 September 2026
+This is to inform all students that several districts of North Bengal have been severely affected by floods and landslides.
+Our school has decided to stand by the victims in this difficult time. Required items are cash, clothes, dry food, medicines and blankets. Students may submit their contributions to the undersigned in the school office from 10 a.m. to 2 p.m. The last date of submission is 20 September 2026.
+All students are earnestly urged to donate generously according to their capacity and help the affected people.
+Sd/-
+Ankit Roy
+Secretary, Students’ Welfare Committee</div>
+    <div class="bengali"><strong>Bengali Meaning:</strong> নোটিশ – এবিসি হাই স্কুল – ছাত্র কল্যাণ কমিটি – বন্যা ও ভূমিধস দুর্গতদের সাহায্য – তারিখ: ৮ সেপ্টেম্বর ২০২৬। এই মর্মে সকল ছাত্রছাত্রীকে জানানো যাচ্ছে যে উত্তরবঙ্গের কয়েকটি জেলা বন্যা ও ভূমিধসে মারাত্মকভাবে ক্ষতিগ্রস্ত হয়েছে। আমাদের স্কুল এই কঠিন সময়ে দুর্গতদের পাশে দাঁড়ানোর সিদ্ধান্ত নিয়েছে। প্রয়োজনীয় জিনিস হলো টাকা, কাপড়, শুকনো খাবার, ওষুধ ও কম্বল। ছাত্রছাত্রীরা সকাল ১০টা থেকে দুপুর ২টার মধ্যে স্কুল অফিসে নিম্নস্বাক্ষরকারীর কাছে তাদের অনুদান জমা দিতে পারেন। জমা দেওয়ার শেষ তারিখ ২০ সেপ্টেম্বর ২০২৬। সকল ছাত্রছাত্রীকে সাধ্যমতো উদারভাবে দান করে ক্ষতিগ্রস্ত মানুষদের সাহায্য করার জন্য আন্তরিক আহ্বান জানানো হচ্ছে। স্বাক্ষরিত/- অঙ্কিত রায়, সচিব, ছাত্র কল্যাণ কমিটি।</div>
+  </div>
+</div>
+<!-- 16 -->
+<div class="card" id="n16">
+  <div class="card-header">16. Tree Plantation Drive</div>
+  <div class="card-body">
+    <div class="question"><strong>Question:</strong> Suppose you are the student-secretary of your School and your school is going to organize a Tree Plantation Drive in your school campus in the next month. write a notice for the students asking them to participate in the programme. You may use the following points. (in about 100 words) [Points: date, time and venue—registration procedure—programme details—importance of the programme]</div>
+    <div class="notice-box"><strong>NOTICE</strong>
+<strong>ABC High School</strong>
+<strong>Tree Plantation Drive</strong>
+Date: 8 September 2026
+This is to inform all students that our school is going to organise a Tree Plantation Drive in the school campus next month.
+The programme will be held on 5 October 2026 at 9:00 a.m. in the school garden. Students must register their names with the undersigned by 28 September 2026. Saplings will be provided by the school. Students will plant the saplings and water them regularly. Tree plantation is very important for a clean environment, pure air and a healthy life.
+All students are earnestly requested to participate actively and make our campus greener.
+Sd/-
+Priya Banerjee
+Student Secretary</div>
+    <div class="bengali"><strong>Bengali Meaning:</strong> নোটিশ – এবিসি হাই স্কুল – বৃক্ষরোপণ অভিযান – তারিখ: ৮ সেপ্টেম্বর ২০২৬। এই মর্মে সকল ছাত্রছাত্রীকে জানানো যাচ্ছে যে আমাদের স্কুল আগামী মাসে স্কুল ক্যাম্পাসে একটি বৃক্ষরোপণ অভিযানের আয়োজন করতে চলেছে। কর্মসূচিটি ৫ অক্টোবর ২০২৬ তারিখে সকাল ৯টায় স্কুল বাগানে অনুষ্ঠিত হবে। ছাত্রছাত্রীদের ২৮ সেপ্টেম্বর ২০২৬-এর মধ্যে নিম্নস্বাক্ষরকারীর কাছে নাম নথিভুক্ত করতে হবে। স্কুল চারা সরবরাহ করবে। ছাত্রছাত্রীরা চারা রোপণ করবে এবং নিয়মিত জল দেবে। পরিচ্ছন্ন পরিবেশ, বিশুদ্ধ বাতাস ও সুস্থ জীবনের জন্য বৃক্ষরোপণ খুবই গুরুত্বপূর্ণ। সকল ছাত্রছাত্রীকে সক্রিয়ভাবে অংশগ্রহণ করে আমাদের ক্যাম্পাসকে সবুজ করার জন্য আন্তরিক অনুরোধ করা হচ্ছে। স্বাক্ষরিত/- প্রিয়া ব্যানার্জি, ছাত্র সচিব।</div>
+  </div>
+</div>
+
+</div>
+
+<footer>
+  Click any <span style="color:#0f766e;border-bottom:1.5px dotted #0f766e;">highlighted word</span> to see its Bengali meaning.<br>
+  <strong>All 14 Formal Letters + 12 Informal Letters + 16 Notices</strong><br>
+  Proper Format • Introduction–Body–Conclusion • Ready for MP Exam
+</footer>
+
+<script>
+  document.querySelectorAll('.word').forEach(el => {
+    el.addEventListener('click', function(e) {
+      e.stopPropagation();
+      document.querySelectorAll('.word.active').forEach(w => {
+        if (w !== this) w.classList.remove('active');
+      });
+      this.classList.toggle('active');
+    });
+  });
+  document.addEventListener('click', () => {
+    document.querySelectorAll('.word.active').forEach(w => w.classList.remove('active'));
+  });
+</script>
+</body>
+</html>
